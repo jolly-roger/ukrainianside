@@ -1,0 +1,84 @@
+import cherrypy
+import os.path
+from cherrypy import _cperror
+
+
+class ukrainianside(object):
+    resources = resources.resources()
+    access = webAuth.access()
+    
+    @cherrypy.expose
+    def sitemap_xml(self):
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"http://ukrainianside.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl\"?><!-- generator=\"wordpress/3.3.1\" -->" \
+            "<!-- sitemap-generator-url=\"http://www.arnebrachhold.de\" sitemap-generator-version=\"3.2.6.2\" -->" \
+            "<!-- generated-on=\"January 11, 2012 10:43 am\" -->" \
+            "<urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/</loc>" \
+                    "<lastmod>2012-01-07T13:52:29+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/2011/towns/one-day-in-odessa/</loc>" \
+                    "<lastmod>2012-01-07T13:52:29+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/</loc>" \
+                    "<lastmod>2012-01-07T13:42:00+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/2012/information/national-archaeological-park-olbia/</loc>" \
+                    "<lastmod>2012-01-07T13:33:01+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/2011/information/odessa-region-trains-timetable/</loc>" \
+                    "<lastmod>2011-12-16T12:26:55+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/2011/general/introduction/</loc>" \
+                    "<lastmod>2011-12-16T12:22:29+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/category/towns/</loc>" \
+                    "<changefreq>weekly</changefreq>" \
+                    "<priority>0.3</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/category/old-ruins/greek/</loc>" \
+                    "<changefreq>weekly</changefreq>" \
+                    "<priority>0.3</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/category/information/</loc>" \
+                    "<changefreq>weekly</changefreq>" \
+                    "<priority>0.3</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/category/general/</loc>" \
+                    "<changefreq>weekly</changefreq>" \
+                    "<priority>0.3</priority>" \
+                "</url>" \
+            "</urlset>"
+
+
+def error_page_default(status, message, traceback, version):
+    return "Error"
+
+cherrypy.config.update({'error_page.default': error_page_default})
+
+
+
+ukrainiansideconf = os.path.join(os.path.dirname(__file__), "ukrainianside.conf")
+
+cherrypy.quickstart(ukrainianside(), config=ukrainiansideconf)
