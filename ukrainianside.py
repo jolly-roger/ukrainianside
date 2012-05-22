@@ -4,9 +4,6 @@ from cherrypy import _cperror
 
 
 class ukrainianside(object):
-    resources = resources.resources()
-    access = webAuth.access()
-    
     @cherrypy.expose
     def sitemap_xml(self):
         return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"http://ukrainianside.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl\"?><!-- generator=\"wordpress/3.3.1\" -->" \
