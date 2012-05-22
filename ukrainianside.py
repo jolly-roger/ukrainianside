@@ -100,12 +100,6 @@ class ukrainianside(object):
         
             return article
 
-    
-    #http://ukrainianside.com/category/towns/
-    #http://ukrainianside.com/category/old-ruins/greek/
-    #http://ukrainianside.com/category/information/
-    #http://ukrainianside.com/category/general/
-
 
 def error_page_default(status, message, traceback, version):
     return "Error"
