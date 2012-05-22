@@ -75,7 +75,7 @@ class ukrainianside(object):
         if year is None and category is None and  title is None:
             cherrypy.response.headers['Content-Type'] = "text/html"
         
-            home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"]+ "home.html").read()
+            home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"]+ "home.html", encoding="utf-8").read()
         
             return home
         
