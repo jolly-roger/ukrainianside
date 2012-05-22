@@ -6,6 +6,8 @@ from cherrypy import _cperror
 class ukrainianside(object):
     @cherrypy.expose
     def sitemap_xml(self):
+        cherrypy.response.headers['Content-Type'] = "application/xml"
+
         return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"http://ukrainianside.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl\"?><!-- generator=\"wordpress/3.3.1\" -->" \
             "<!-- sitemap-generator-url=\"http://www.arnebrachhold.de\" sitemap-generator-version=\"3.2.6.2\" -->" \
             "<!-- generated-on=\"January 11, 2012 10:43 am\" -->" \
