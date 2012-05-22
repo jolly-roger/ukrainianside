@@ -69,6 +69,28 @@ class ukrainianside(object):
                     "<priority>0.3</priority>" \
                 "</url>" \
             "</urlset>"
+                    
+    @cherrypy.expose
+    def index(self, year = None, category = None, title = None):
+        if year is None and category is None and  title is None:
+            cherrypy.response.headers['Content-Type'] = "text/html"
+        
+            home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"]+ "home.html").read()
+        
+            return home
+        
+                    
+                    
+    #http://ukrainianside.com/2011/towns/one-day-in-odessa/
+    #http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/
+    #http://ukrainianside.com/2012/information/national-archaeological-park-olbia/
+    #http://ukrainianside.com/2011/information/odessa-region-trains-timetable/
+    #http://ukrainianside.com/2011/general/introduction/
+    
+    #http://ukrainianside.com/category/towns/
+    #http://ukrainianside.com/category/old-ruins/greek/
+    #http://ukrainianside.com/category/information/
+    #http://ukrainianside.com/category/general/
 
 
 def error_page_default(status, message, traceback, version):
