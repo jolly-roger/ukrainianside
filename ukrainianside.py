@@ -72,7 +72,7 @@ class ukrainianside(object):
                     
     @cherrypy.expose
     def index(self, year = None, category = None, subcategory = None, title = None):
-        if year is None and category is None and subcategory in None and title is None:
+        if year is None and category is None and subcategory is None and title is None:
             home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"]+ "home.html", encoding="utf-8").read()
         
             return home
