@@ -71,14 +71,22 @@ class ukrainianside(object):
             "</urlset>"
                     
     @cherrypy.expose
-    def index(self, year = None, category = None, title = None):
-        if year is None and category is None and  title is None:
-            cherrypy.response.headers['Content-Type'] = "text/html"
-        
+    def index(self, year = None, category = None, subcategory = None, title = None):
+        if year is None and category is None and subcategory in None and title is None:
             home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"]+ "home.html", encoding="utf-8").read()
         
             return home
+        else:
+            filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + str(year) + "/" + category + "/" + subcategory
+            
+            if title is not None:
+                filename += "/" + title + ".html"
+            else:
+                filename += ".html"
+            
+            article = open(filename, encoding="utf-8").read()
         
+            return article
                     
                     
     #http://ukrainianside.com/2011/towns/one-day-in-odessa/
