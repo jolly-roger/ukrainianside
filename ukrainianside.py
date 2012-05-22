@@ -8,7 +8,7 @@ class ukrainianside(object):
     def sitemap_xml(self):
         cherrypy.response.headers['Content-Type'] = "application/xml"
 
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"http://ukrainianside.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl\"?><!-- generator=\"wordpress/3.3.1\" -->" \
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" \
             "<!-- sitemap-generator-url=\"http://www.arnebrachhold.de\" sitemap-generator-version=\"3.2.6.2\" -->" \
             "<!-- generated-on=\"January 11, 2012 10:43 am\" -->" \
             "<urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\" xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">" \
