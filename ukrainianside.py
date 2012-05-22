@@ -76,6 +76,18 @@ class ukrainianside(object):
             home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"]+ "home.html", encoding="utf-8").read()
         
             return home
+        elif year is not None and category is not None and subcategory is not None:
+            filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + str(year) + "/" + category + "/" + subcategory + ".html"
+            
+            article = open(filename, encoding="utf-8").read()
+        
+            return article
+        elif year is not None and category is not None:
+            filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + str(year) + "/" + category + ".html"
+            
+            article = open(filename, encoding="utf-8").read()
+        
+            return article
         else:
             filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + str(year) + "/" + category + "/" + subcategory
             
