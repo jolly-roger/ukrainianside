@@ -2,6 +2,8 @@ import cherrypy
 import os.path
 from cherrypy import _cperror
 
+from content import layout
+
 
 class ukrainianside(object):
     @cherrypy.expose
@@ -69,13 +71,15 @@ class ukrainianside(object):
                     "<priority>0.3</priority>" \
                 "</url>" \
             "</urlset>"
-                    
+    
+    @cherrypy.expose
+    def index(self):
+        return layout.getIndex()
+    
     @cherrypy.expose
     def default(self, year = None, category = None, subcategory = None, title = None):
         if year is None and category is None and subcategory is None and title is None:
-            home = open(cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/home.html", encoding="utf-8").read()
-        
-            return home
+            return layout.getHome()
         elif year is not None and category is not None and subcategory is not None and title is not None:
             filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/" + str(year) + "/" + category + "/" + subcategory
             
