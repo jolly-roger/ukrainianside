@@ -80,6 +80,8 @@ class ukrainianside(object):
     def default(self, year = None, category = None, subcategory = None, title = None):
         if year is None and category is None and subcategory is None and title is None:
             return layout.getHome()
+        elif year == '2011' and category == 'towns' and subcategory == 'one-day-in-odessa' and title is None:
+            return layout.getOneDayInOdessa()
         elif year is not None and category is not None and subcategory is not None and title is not None:
             filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/" + str(year) + "/" + category + "/" + subcategory
             
