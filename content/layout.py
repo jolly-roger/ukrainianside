@@ -25,3 +25,7 @@ def getHome():
 def getOneDayInOdessa():
     tmpl = getenv().get_template("one-day-in-odessa.html")
     return tmpl.render()
+
+def getTripToOlbia():
+    tmpl = getenv().get_template("trip-to-olbia.html")
+    return tmpl.render()
