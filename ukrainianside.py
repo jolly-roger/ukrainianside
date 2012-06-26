@@ -84,6 +84,12 @@ class ukrainianside(object):
             return layout.getOneDayInOdessa()
         elif year == '2011' and category == 'old-ruins' and subcategory == 'greek' and title == 'trip-to-olbia':
             return layout.getTripToOlbia()
+        elif year == '2011' and category == 'information' and subcategory == 'odessa-region-trains-timetable' and title is None:
+            return layout.getOdessaRegionTrainsTimetable()
+        elif year == '2011' and category == 'general' and subcategory == 'introduction' and title is None:
+            return layout.getIntroduction()
+        elif year == '2012' and category == 'information' and subcategory == 'national-archaeological-park-olbia' and title is None:
+            return layout.getNationalArchaeologicalParkOlbia()
         elif year is not None and category is not None and subcategory is not None and title is not None:
             filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/" + str(year) + "/" + category + "/" + subcategory
             

@@ -29,3 +29,15 @@ def getOneDayInOdessa():
 def getTripToOlbia():
     tmpl = getenv().get_template("trip-to-olbia.html")
     return tmpl.render()
+
+def getOdessaRegionTrainsTimetable():
+    tmpl = getenv().get_template("odessa-region-trains-timetable.html")
+    return tmpl.render()
+
+def getIntroduction():
+    tmpl = getenv().get_template("introduction.html")
+    return tmpl.render()
+
+def getNationalArchaeologicalParkOlbia():
+    tmpl = getenv().get_template("national-archaeological-park-olbia.html")
+    return tmpl.render()
