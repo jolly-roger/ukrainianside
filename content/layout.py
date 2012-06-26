@@ -41,3 +41,19 @@ def getIntroduction():
 def getNationalArchaeologicalParkOlbia():
     tmpl = getenv().get_template("national-archaeological-park-olbia.html")
     return tmpl.render()
+
+def getTowns():
+    tmpl = getenv().get_template("towns.html")
+    return tmpl.render()
+
+def getInformation():
+    tmpl = getenv().get_template("information.html")
+    return tmpl.render()
+
+def getGeneral():
+    tmpl = getenv().get_template("general.html")
+    return tmpl.render()
+
+def getGreek():
+    tmpl = getenv().get_template("greek.html")
+    return tmpl.render()

@@ -90,29 +90,14 @@ class ukrainianside(object):
             return layout.getIntroduction()
         elif year == '2012' and category == 'information' and subcategory == 'national-archaeological-park-olbia' and title is None:
             return layout.getNationalArchaeologicalParkOlbia()
-        elif year is not None and category is not None and subcategory is not None and title is not None:
-            filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/" + str(year) + "/" + category + "/" + subcategory
-            
-            if title is not None:
-                filename += "/" + title + ".html"
-            else:
-                filename += ".html"
-            
-            article = open(filename, encoding="utf-8").read()
-        
-            return article
-        elif year is not None and category is not None and subcategory is not None:
-            filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/" + str(year) + "/" + category + "/" + subcategory + ".html"
-            
-            article = open(filename, encoding="utf-8").read()
-        
-            return article
-        elif year is not None and category is not None:
-            filename = cherrypy.request.app.config["ukrainianside"]["base_dir"] + "content/" + str(year) + "/" + category + ".html"
-            
-            article = open(filename, encoding="utf-8").read()
-        
-            return article
+        elif year == 'category' and category == 'towns' and subcategory is None and title is None:
+            return layout.getTowns()
+        elif year == 'category' and category == 'information' and subcategory is None and title is None:
+            return layout.getInformation()
+        elif year == 'category' and category == 'general' and subcategory is None and title is None:
+            return layout.getGeneral()
+        elif year == 'category' and category == 'old-ruins' and subcategory == 'greek' and title is None:
+            return layout.getGeneral()
 
 
 def error_page_default(status, message, traceback, version):
