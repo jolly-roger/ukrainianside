@@ -39,7 +39,15 @@
         <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ukrainianside.com/wp-includes/wlwmanifest.xml"> 
         {% endblock %}
     </head>
-    
+    <body class="{% block bodyStyles %}home blog single-author two-column right-sidebar{% endblock %}">
+        <div id="page" class="hfeed">
+            <header id="branding" role="banner">
+                    <hgroup>
+                        <h1 id="site-title"><span><a href="http://ukrainianside.com/" title="Украинская сторонка" rel="home">Украинская сторонка</a></span></h1>
+                        <h2 id="site-description">Путешествия по Украине</h2>
+                    </hgroup>
+                    <hr />
+            </header><!-- #branding -->
     {% block mainContent %}
     {% endblock %}
 </html>
