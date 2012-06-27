@@ -12,7 +12,7 @@ def getenv():
     if env is None:
         env = Environment(loader = FileSystemLoader(cherrypy.request.app.config["ukrainianside"]["base_dir"] + \
             "content"))
-        env.globals["postedIn"] = "Опубликована в"
+        env.globals["postedIn"] = "Опубликована в "
         
     return env
 
