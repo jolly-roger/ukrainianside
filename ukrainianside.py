@@ -98,6 +98,8 @@ class ukrainianside(object):
             return layout.getGeneral()
         elif year == 'category' and category == 'old-ruins' and subcategory == 'greek' and title is None:
             return layout.getGreek()
+        else:
+            return layout.getHome()
 
 
 #def error_page_default(status, message, traceback, version):
