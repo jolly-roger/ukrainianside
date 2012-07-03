@@ -51,6 +51,12 @@ class ukrainianside(object):
                     "<priority>1.0</priority>" \
                 "</url>" \
                 "<url>" \
+                    "<loc>http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/</loc>" \
+                    "<lastmod>2012-07-03T12:22:29+00:00</lastmod>" \
+                    "<changefreq>daily</changefreq>" \
+                    "<priority>1.0</priority>" \
+                "</url>" \
+                "<url>" \
                     "<loc>http://ukrainianside.com/category/towns/</loc>" \
                     "<changefreq>weekly</changefreq>" \
                     "<priority>0.3</priority>" \
@@ -67,6 +73,11 @@ class ukrainianside(object):
                 "</url>" \
                 "<url>" \
                     "<loc>http://ukrainianside.com/category/general/</loc>" \
+                    "<changefreq>weekly</changefreq>" \
+                    "<priority>0.3</priority>" \
+                "</url>" \
+                "<url>" \
+                    "<loc>http://ukrainianside.com/category/nature/</loc>" \
                     "<changefreq>weekly</changefreq>" \
                     "<priority>0.3</priority>" \
                 "</url>" \
