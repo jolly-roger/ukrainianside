@@ -90,6 +90,8 @@ class ukrainianside(object):
             return layout.getIntroduction()
         elif year == '2012' and category == 'information' and subcategory == 'national-archaeological-park-olbia' and title is None:
             return layout.getNationalArchaeologicalParkOlbia()
+        elif year == '2012' and category == 'nature' and subcategory == 'trip-to-kinburn-peninsula' and title is None:
+            return layout.getTripToKinburnPeninsula()
         elif year == 'category' and category == 'towns' and subcategory is None and title is None:
             return layout.getTowns()
         elif year == 'category' and category == 'information' and subcategory is None and title is None:
@@ -98,6 +100,8 @@ class ukrainianside(object):
             return layout.getGeneral()
         elif year == 'category' and category == 'old-ruins' and subcategory == 'greek' and title is None:
             return layout.getGreek()
+        elif year == 'category' and category == 'nature' and subcategory is None and title is None:
+            return layout.getNature()
         else:
             return layout.getHome()
 

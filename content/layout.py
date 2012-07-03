@@ -44,6 +44,10 @@ def getNationalArchaeologicalParkOlbia():
     tmpl = getenv().get_template("pages/national-archaeological-park-olbia.html")
     return tmpl.render()
 
+def getTripToKinburnPeninsula():
+    tmpl = getenv().get_template("pages/trip-to-kinburn-peninsula.html")
+    return tmpl.render()
+
 def getTowns():
     tmpl = getenv().get_template("pages/towns.html")
     return tmpl.render()
@@ -58,4 +62,8 @@ def getGeneral():
 
 def getGreek():
     tmpl = getenv().get_template("pages/greek.html")
+    return tmpl.render()
+
+def getNature():
+    tmpl = getenv().get_template("pages/nature.html")
     return tmpl.render()
