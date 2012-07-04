@@ -2,9 +2,9 @@
 
 {% block headerContent %}
 <title>Расписание пригородных поездов Одесского региона | Украинская сторонка</title>
-<link rel="prev" title="Поездка в Ольвию" href="http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/">
-<link rel="next" title="Один день в Одессе" href="http://ukrainianside.com/2011/towns/one-day-in-odessa/">
-<link rel="canonical" href="http://ukrainianside.com/2011/information/odessa-region-trains-timetable/">
+<link rel="prev" title="Поездка в Ольвию" href="{{ getAticleUrlByAlias('trip-to-olbia') }}">
+<link rel="next" title="Один день в Одессе" href="{{ getAticleUrlByAlias('one-day-in-odessa') }}">
+<link rel="canonical" href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}">
 {% endblock %}
 
 
@@ -18,8 +18,8 @@
 				
 					<nav id="nav-single">
 						<h3 class="assistive-text">Post navigation</h3>
-						<span class="nav-previous"><a href="http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
-						<span class="nav-next"><a href="http://ukrainianside.com/2011/towns/one-day-in-odessa/" rel="next">Next <span class="meta-nav">→</span></a></span>
+						<span class="nav-previous"><a href="{{ getAticleUrlByAlias('trip-to-olbia') }}" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-next"><a href="{{ getAticleUrlByAlias('one-day-in-odessa') }}" rel="next">Next <span class="meta-nav">→</span></a></span>
 					</nav><!-- #nav-single -->
 
 					

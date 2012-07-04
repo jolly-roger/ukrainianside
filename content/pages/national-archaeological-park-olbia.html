@@ -2,10 +2,10 @@
 
 {% block headerContent %}
 <title>Национальный археологический заповедник “Ольвия” | Украинская сторонка</title>
-<link rel="prev" title="Один день в Одессе" href="http://ukrainianside.com/2011/towns/one-day-in-odessa/">
+<link rel="prev" title="Один день в Одессе" href="{{ getAticleUrlByAlias('one-day-in-odessa') }}">
 <link rel="next" title="Поездка на Кинбурнский полуостров"
-	  href="http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/">
-<link rel="canonical" href="http://ukrainianside.com/2012/information/national-archaeological-park-olbia/">
+	  href="{{ getAticleUrlByAlias('trip-to-kinburn-peninsula') }}">
+<link rel="canonical" href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}">
 {% endblock %}
 
 
@@ -19,9 +19,9 @@
 				
 					<nav id="nav-single">
 						<h3 class="assistive-text">Post navigation</h3>
-						<span class="nav-previous"><a href="http://ukrainianside.com/2011/towns/one-day-in-odessa/" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-previous"><a href="{{ getAticleUrlByAlias('one-day-in-odessa') }}" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
 						<span class="nav-next">
-							<a href="http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/" rel="next">
+							<a href="{{ getAticleUrlByAlias('trip-to-kinburn-peninsula') }}" rel="next">
                                 Next <span class="meta-nav">→</span></a>
 						</span>
 					</nav><!-- #nav-single -->

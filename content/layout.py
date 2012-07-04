@@ -18,6 +18,7 @@ def getenv():
         env.globals["continueReading"] = "Читать далее "
         
         env.globals["getCategoryUrlByAlias"] = urls.getCategoryUrlByAlias
+        env.globals["getAticleUrlByAlias"] = urls.getAticleUrlByAlias
         
     return env
 

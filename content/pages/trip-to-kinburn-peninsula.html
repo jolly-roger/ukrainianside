@@ -3,8 +3,8 @@
 {% block headerContent %}
 <title>Поездка на Кинбурнский полуостров | Украинская сторонка</title>
 <link rel="prev" title="Национальный археологический заповедник “Ольвия”"
-      href="http://ukrainianside.com/2012/information/national-archaeological-park-olbia/">
-<link rel="canonical" href="http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/">
+      href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}">
+<link rel="canonical" href="{{ getAticleUrlByAlias('trip-to-kinburn-peninsula') }}">
 {% endblock %}
 
 
@@ -19,7 +19,7 @@
 					<nav id="nav-single">
 						<h3 class="assistive-text">Post navigation</h3>
 						<span class="nav-previous">
-                            <a href="http://ukrainianside.com/2012/information/national-archaeological-park-olbia/" rel="prev">
+                            <a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}" rel="prev">
                                 <span class="meta-nav">←</span> Previous</a>
                         </span>
 						<span class="nav-next">

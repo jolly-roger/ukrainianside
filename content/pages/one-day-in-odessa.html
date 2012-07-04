@@ -2,9 +2,9 @@
 
 {% block headerContent %}
 <title>Один день в Одессе | Украинская сторонка</title>
-<link rel="prev" title="Расписание пригородных поездов Одесского региона" href="http://ukrainianside.com/2011/information/odessa-region-trains-timetable/">
-<link rel="next" title="Национальный археологический заповедник “Ольвия”" href="http://ukrainianside.com/2012/information/national-archaeological-park-olbia/">
-<link rel="canonical" href="http://ukrainianside.com/2011/towns/one-day-in-odessa/">
+<link rel="prev" title="Расписание пригородных поездов Одесского региона" href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}">
+<link rel="next" title="Национальный археологический заповедник “Ольвия”" href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}">
+<link rel="canonical" href="{{ getAticleUrlByAlias('one-day-in-odessa') }}">
 {% endblock %}
 
 
@@ -18,8 +18,8 @@
 				
 					<nav id="nav-single">
 						<h3 class="assistive-text">Post navigation</h3>
-						<span class="nav-previous"><a href="http://ukrainianside.com/2011/information/odessa-region-trains-timetable/" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
-						<span class="nav-next"><a href="http://ukrainianside.com/2012/information/national-archaeological-park-olbia/" rel="next">Next <span class="meta-nav">→</span></a></span>
+						<span class="nav-previous"><a href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-next"><a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}" rel="next">Next <span class="meta-nav">→</span></a></span>
 					</nav><!-- #nav-single -->
 
 					
@@ -65,7 +65,7 @@
 <p>Стоимость входа в музей не помню – то ли 20, то ли 40 гривень. 
 Впечатление от музея – офигеть, не ожидал что там достаточно много 
 интересного, правда создалось впечатление что там почти половина 
-музейных экспонатов из <a title="Национальный археологический заповедник “Ольвия”" href="http://ukrainianside.com/2012/information/national-archaeological-park-olbia/">Ольвии</a>(<a title="Trip to Olbia(Olvia)" href="http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/">Поездка в Ольвию</a>), ну судя по их подписям <img src="/content/icons/icon_smile.gif" alt=":)" class="wp-smiley">
+музейных экспонатов из <a title="Национальный археологический заповедник “Ольвия”" href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}">Ольвии</a>(<a title="Trip to Olbia(Olvia)" href="{{ getAticleUrlByAlias('trip-to-olbia') }}">Поездка в Ольвию</a>), ну судя по их подписям <img src="/content/icons/icon_smile.gif" alt=":)" class="wp-smiley">
  . Кроме греческих экспонатов там есть ещё экспонаты относящиеся к 
 древней Руси, и ещё более древние, боше всего заворожила коллекция 
 золотых экспонатов – вообще не ожидал подобные экспонаты увидеть, так же
@@ -78,7 +78,7 @@
 автобусы в Белгород-Днестровский, оказалось неверным, там мне сказали 
 что туда ходят только электрички, так что я отправился на 
 железнодорожный вокзал и раздобыл там расписание электричек.</p>
-<p><a title="Расписание пригородных поездов Одесского региона" href="http://ukrainianside.com/2011/information/odessa-region-trains-timetable/">Расписание пригородных поездов Одесского региона</a></p>
+<p><a title="Расписание пригородных поездов Одесского региона" href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}">Расписание пригородных поездов Одесского региона</a></p>
 <p>Отлично – главная цель выполнена <img src="/content/icons/icon_smile.gif" alt=":)" class="wp-smiley">
  , теперь можно и пошататься по городу. Пошатался я главным образом по 
 паркам – ничего особенного, под конец решил сходить к морю, долго не мог

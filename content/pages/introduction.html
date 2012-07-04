@@ -2,8 +2,8 @@
 
 {% block headerContent %}
 <title>Предисловие | Украинская сторонка</title>
-<link rel="next" title="Поездка в Ольвию" href="http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/">
-<link rel="canonical" href="http://ukrainianside.com/2011/general/introduction/">
+<link rel="next" title="Поездка в Ольвию" href="{{ getAticleUrlByAlias('trip-to-olbia') }}">
+<link rel="canonical" href="{{ getAticleUrlByAlias('introduction') }}">
 {% endblock %}
 
 
@@ -18,7 +18,7 @@
 					<nav id="nav-single">
 						<h3 class="assistive-text">Post navigation</h3>
 						<span class="nav-previous"></span>
-						<span class="nav-next"><a href="http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/" rel="next">Next <span class="meta-nav">→</span></a></span>
+						<span class="nav-next"><a href="{{ getAticleUrlByAlias('trip-to-olbia') }}" rel="next">Next <span class="meta-nav">→</span></a></span>
 					</nav><!-- #nav-single -->
 
 					
