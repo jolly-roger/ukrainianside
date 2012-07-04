@@ -3,7 +3,7 @@ categories = {
     'greek': 'http://ukrainianside.com/category/old-ruins/greek/',
     'information': 'http://ukrainianside.com/category/information/',
     'nature': 'http://ukrainianside.com/category/nature/',
-    'towna': 'http://ukrainianside.com/category/towns/'
+    'towns': 'http://ukrainianside.com/category/towns/'
 }
 
 
