@@ -2,6 +2,8 @@ import cherrypy
 
 from jinja2 import Environment, FileSystemLoader
 
+from data import urls
+
 
 env = None
 
@@ -14,6 +16,8 @@ def getenv():
             "content"))
         env.globals["postedIn"] = "Опубликована в "
         env.globals["continueReading"] = "Читать далее "
+        
+        env.globals["getCategoryUrlByAlias"] = urls.getCategoryUrlByAlias
         
     return env
 
