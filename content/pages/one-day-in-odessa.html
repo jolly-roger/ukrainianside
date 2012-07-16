@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{% from "macroses/nav.macro" import nav as nav%}
+
+
 {% block headerContent %}
 <title>Один день в Одессе | Украинская сторонка</title>
 <link rel="prev" title="Расписание пригородных поездов Одесского региона" href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}">
@@ -14,15 +17,8 @@
 	<div id="main">
 		<div id="primary">
 			<div id="content" role="main">
+				{{ nav(getAticleUrlByAlias('odessa-region-trains-timetable'), getAticleUrlByAlias('national-archaeological-park-olbia')) }}
 
-				
-					<nav id="nav-single">
-						<h3 class="assistive-text">Post navigation</h3>
-						<span class="nav-previous"><a href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}" rel="prev"><span class="meta-nav">←</span> Previous</a></span>
-						<span class="nav-next"><a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}" rel="next">Next <span class="meta-nav">→</span></a></span>
-					</nav><!-- #nav-single -->
-
-					
 <article id="post-73" class="post-73 post type-post status-publish format-standard hentry category-towns">
 	<header class="entry-header">
 		<h1 class="entry-title">Один день в Одессе</h1>

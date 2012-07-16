@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{% from "macroses/nav.macro" import nav as nav%}
+
+
 {% block headerContent %}
 <title>Поездка на Кинбурнский полуостров | Украинская сторонка</title>
 <link rel="prev" title="Национальный археологический заповедник “Ольвия”"
@@ -14,19 +17,8 @@
 	<div id="main">
 		<div id="primary">
 			<div id="content" role="main">
+				{{ nav(getAticleUrlByAlias('national-archaeological-park-olbia'), none) }}
 
-				
-					<nav id="nav-single">
-						<h3 class="assistive-text">Post navigation</h3>
-						<span class="nav-previous">
-                            <a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}" rel="prev">
-                                <span class="meta-nav">←</span> Previous</a>
-                        </span>
-						<span class="nav-next">
-                        </span>
-					</nav><!-- #nav-single -->
-
-					
 <article id="post-73" class="post-73 post type-post status-publish format-standard hentry category-towns">
 	<header class="entry-header">
 		<h1 class="entry-title">Поездка на Кинбурнский полуостров</h1>
