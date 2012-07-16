@@ -48,10 +48,10 @@ class ukrainianside(object):
             return layout.getHome()
 
 
-#def error_page_default(status, message, traceback, version):
-#    return "Error"
-#
-#cherrypy.config.update({'error_page.default': error_page_default})
+def error_page_default(status, message, traceback, version):
+    return "Error"
+
+cherrypy.config.update({'error_page.default': error_page_default})
 
 
 
