@@ -1,0 +1,18 @@
+{% macro nav(prevUrl = none, nextUrl = none) -%}
+    <nav id="nav-single">
+        <h3 class="assistive-text">Перемещение между публикациями</h3>
+        
+        {% if not prevUrl is  none%}
+            <span class="nav-previous">
+                <a href="{{prevUrl}}" rel="prev">
+                    <span class="meta-nav">←</span> Предыдущая</a>
+            </span>
+        {% endif %}
+            
+        {% if not nextUrl is none %}
+            <span class="nav-next">
+                <a href="{{nextUrl}}" rel="next">Следующая <span class="meta-nav">→</span></a>
+            </span>
+        {% endif %}
+    </nav><!-- #nav-single -->
+{%- endmacro%}
