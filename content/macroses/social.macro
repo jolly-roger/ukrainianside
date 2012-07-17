@@ -8,7 +8,7 @@
                     <div id="vktest"></div>
                     <script type="text/javascript">
                         jQuery(document).ready(function(){
-                            VK.init({apiId: 303288, onlyWidgets: true});
+                            VK.init({apiId: 3039427, onlyWidgets: true});
                             VK.Widgets.Like("vktest", {type: "button"});
                         });
                     </script>    
