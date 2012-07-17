@@ -8,11 +8,4 @@
                rel="bookmark">{{getAticleNameByAlias(aticleAlias)}}</a></h1>
         {{social(getAticleUrlByAlias(aticleAlias))}}
     </header><!-- .entry-header -->
-    
-    <div id="vktest"></div>
-                    <script type="text/javascript">
-                        $(function(){
-                            VK.Widgets.Like("vk_like", {type: "button"});
-                        });
-                    </script>
 {%- endmacro %}

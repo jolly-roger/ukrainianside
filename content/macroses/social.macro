@@ -7,7 +7,12 @@
                         data-layout="button_count" data-width="450" data-show-faces="false"></div>
                 </td>
                 <td>
-                        
+                    <div id="vktest"></div>
+                    <script type="text/javascript">
+                        $(function(){
+                            VK.Widgets.Like("vktest", {type: "button"});
+                        });
+                    </script>    
                 </td>
             </tr>
         </table>
