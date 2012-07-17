@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% from "macroses/nav.macro" import nav as nav%}
+{% from "macroses/footer.macro" import footer as footer%}
 
 
 {% block headerContent %}
@@ -121,10 +122,8 @@
 		когда я буду переправляться обратно в Очаков, в битком набитом людьми баркасе, а пока что я наслаждаюсь
 		умиротворением и гармонией с самим собой, которые даёт это мест, и я обязательно ещё приеду сюда.</p>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-meta">
-		{{ postedIn }}<a href="{{ getCategoryUrlByAlias('nature') }}" title="Просмотреть все заметки в Природа" rel="category tag">Природа</a>
-	</footer><!-- .entry-meta -->
+	
+	{{footer(getCategoryUrlByAlias('nature'), getCategoryNameByAlias('nature'))}}
 </article><!-- #post-73 -->
 				
 			</div><!-- #content -->

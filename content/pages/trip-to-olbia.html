@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% from "macroses/nav.macro" import nav as nav%}
+{% from "macroses/footer.macro" import footer as footer%}
 
 
 {% block headerContent %}
@@ -109,10 +110,8 @@
  эту затею и дождаться автобуса.</p>
 <p>Вся обратная дорого до Херсона уже была простой и быстрой, и я вернулся полный впечатлений после небольшого путешествия <img src="/content/icons/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
 			</div><!-- .entry-content -->
-
-	<footer class="entry-meta">
-		{{ postedIn }}<a href="{{ getCategoryUrlByAlias('greek') }}" title="Просмотреть все заметки в Греческие" rel="category tag">Греческие</a>
-	</footer><!-- .entry-meta -->
+			
+			{{footer(getCategoryUrlByAlias('greek'), getCategoryNameByAlias('greek'))}}
 </article><!-- #post-41 -->
 
 						<div id="comments">

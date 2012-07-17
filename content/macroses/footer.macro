@@ -1,0 +1,6 @@
+{% macro footer(categoryUrl, categoryName) -%}
+    <footer class="entry-meta">
+		{{ postedIn }}<a href="{{categoryUrl}}"
+						 title="Просмотреть все заметки в {{categoryName}}" rel="category tag">{{categoryName}}</a>
+	</footer><!-- .entry-meta -->
+{%- endmacro %}

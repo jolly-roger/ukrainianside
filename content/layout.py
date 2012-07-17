@@ -3,6 +3,7 @@ import cherrypy
 from jinja2 import Environment, FileSystemLoader
 
 from data import urls
+from data import names
 
 
 env = None
@@ -19,6 +20,8 @@ def getenv():
         
         env.globals["getCategoryUrlByAlias"] = urls.getCategoryUrlByAlias
         env.globals["getAticleUrlByAlias"] = urls.getAticleUrlByAlias
+        
+        env.globals["getCategoryNameByAlias"] = names.getCategoryNameByAlias
         
     return env
 

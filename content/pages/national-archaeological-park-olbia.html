@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% from "macroses/nav.macro" import nav as nav%}
+{% from "macroses/footer.macro" import footer as footer%}
 
 
 {% block headerContent %}
@@ -82,10 +83,8 @@
  Материалы с раскопок Ольвии хранятся в Эрметаже, многих музеях Украины,
  России, Западной Европы и Америки.</p>
 			</div><!-- .entry-content -->
-
-	<footer class="entry-meta">
-		{{ postedIn }}<a href="{{ getCategoryUrlByAlias('information') }}" title="Просмотреть все заметки в Информация" rel="category tag">Информация</a>
-	</footer><!-- .entry-meta -->
+			
+			{{footer(getCategoryUrlByAlias('information'), getCategoryNameByAlias('information'))}}
 </article><!-- #post-157 -->
 				
 			</div><!-- #content -->

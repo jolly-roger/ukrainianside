@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% from "macroses/nav.macro" import nav as nav%}
+{% from "macroses/footer.macro" import footer as footer%}
 
 
 {% block headerContent %}
@@ -38,9 +39,7 @@
 страны.</p>
 			</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		{{ postedIn }}<a href="{{ getCategoryUrlByAlias('general') }}" title="Просмотреть все заметки в Общее" rel="category tag">Общее</a>
-	</footer><!-- .entry-meta -->
+			{{footer(getCategoryUrlByAlias('general'), getCategoryNameByAlias('general'))}}
 </article><!-- #post-5 -->
 				
 			</div><!-- #content -->
