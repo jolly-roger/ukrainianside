@@ -1,17 +1,25 @@
 {% macro social(currentUrl) -%}
     {% if not currentUrl is none %}
-        <div>
+        <script type="">
+            jQuery(document).ready(function(){
+                VK.init({apiId: 3039427, onlyWidgets: true});
+            });
+        </script>
+        <table>
+            <tr>
+                <td>
                     <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
                         data-layout="button_count" data-width="450" data-show-faces="false"></div>
-        </div>
-        <div>
+                </td>
+                <td>
                     <div id="vktest"></div>
                     <script type="text/javascript">
                         jQuery(document).ready(function(){
-                            VK.init({apiId: 3039427, onlyWidgets: true});
                             VK.Widgets.Like("vktest", {type: "button"});
                         });
                     </script>    
-        </div>
+                </td>
+            </tr>
+        </table>
     {% endif %}
 {%- endmacro %}
