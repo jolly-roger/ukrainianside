@@ -2,7 +2,7 @@
     {% if not currentUrl is none %}
         <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
              data-layout="button_count" data-width="450" data-show-faces="false"></div>
-        <div id="vk_like"></div>
+        <div id="vktest"></div>
         <script type="text/javascript">
             //$(function(){
             //    VK.Widgets.Like("vk_like", {type: "button"});
