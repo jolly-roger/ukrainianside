@@ -9,7 +9,7 @@
             <tr>
                 <td>
                     <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
-                        data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                        data-layout="button_count" data-width="50" data-show-faces="false"></div>
                 </td>
                 <td>
                     <div id="vktest"></div>
