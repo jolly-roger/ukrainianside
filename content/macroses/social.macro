@@ -5,7 +5,7 @@
         <div id="vk_like"></div>
         <script type="text/javascript">
             $(function(){
-                VK.Widgets.Like("vk_like", {type: "button", pageUrl:"{{currentUrl}}"});
+                VK.Widgets.Like("vk_like", {type: "button"});
             });
         </script>
     {% endif %}
