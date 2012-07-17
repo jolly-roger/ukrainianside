@@ -51,6 +51,13 @@
               xfbml      : true,
               //oauth      : true,
             });
+            
+                FB.Event.subscribe('edge.create', function(targetUrl) {
+                        _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+                });
+                FB.Event.subscribe('edge.remove', function(targetUrl) {
+                        _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
+                });
           };
         
           (function(d){
