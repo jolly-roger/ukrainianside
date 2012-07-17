@@ -1,4 +1,5 @@
 import cherrypy
+import random
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -23,6 +24,8 @@ def getenv():
         
         env.globals["getCategoryNameByAlias"] = names.getCategoryNameByAlias
         env.globals["getAticleNameByAlias"] = names.getAticleNameByAlias
+        
+        env.globals["randint"] = random.randint
         
     return env
 
