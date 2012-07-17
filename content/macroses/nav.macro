@@ -1,4 +1,9 @@
-{% macro nav(prevUrl = none, nextUrl = none) -%}
+{% macro nav(currentUrl = none, prevUrl = none, nextUrl = none) -%}
+    {% if not currentUrl is none %}
+        <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
+             data-layout="button_count" data-width="450" data-show-faces="false"></div>
+    {% endif %}
+
     <nav id="nav-single">
         {% if not prevUrl is  none%}
             <span class="nav-previous">
