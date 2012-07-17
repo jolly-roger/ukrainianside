@@ -4,7 +4,7 @@
              data-layout="button_count" data-width="450" data-show-faces="false"></div>
         <div id="vk_like"></div>
         <script type="text/javascript">
-            VK.Widgets.Like("vk_like", {type: "button", pageUrl:"{{currentUrl}}"});
+            VK.Widgets.Like("vk_like", {type: "button", pageUrl:"{{currentUrl}}"});  
         </script>
     {% endif %}
 {%- endmacro %}
