@@ -1,20 +1,16 @@
 {% macro social(currentUrl) -%}
     {% if not currentUrl is none %}
-        <table>
-            <tr>
-                <td>
+        <div>
                     <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
                         data-layout="button_count" data-width="450" data-show-faces="false"></div>
-                </td>
-                <td>
+        </div>
+        <div>
                     <div id="vktest"></div>
                     <script type="text/javascript">
                         $(function(){
                             VK.Widgets.Like("vktest", {type: "button"});
                         });
                     </script>    
-                </td>
-            </tr>
-        </table>
+        </div>
     {% endif %}
 {%- endmacro %}
