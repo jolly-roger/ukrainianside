@@ -10,7 +10,7 @@
                         data-layout="button_count" data-width="50" data-show-faces="false"></div>
                 </td>
                 <td>
-                    <div id="vk-like-{{rand0}}-{{rand1}}-{{rand2}}"></div>
+                    <div id="vk-like-{{rand0}}-{{rand1}}-{{rand2}}" style="margin-top: 2px;"></div>
                     <script type="text/javascript">
                         jQuery(document).ready(function(){
                             VK.Widgets.Like("vk-like-{{rand0}}-{{rand1}}-{{rand2}}",
