@@ -1,5 +1,6 @@
 {% macro social(currentUrl) -%}
     {% if not currentUrl is none %}
+        test
         <table>
             <tr>
                 <td>
