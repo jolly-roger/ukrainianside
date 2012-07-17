@@ -1,0 +1,8 @@
+{% macro header(aticleAlias) -%}
+    <header class="entry-header">
+        <h1 class="entry-title">
+            <a href="{{ getAticleUrlByAlias(aticleAlias) }}"
+               title="Постоянная ссылка на {{getAticleNameByAlias(aticleAlias)}}" 
+               rel="bookmark">{{getAticleNameByAlias(aticleAlias)}}</a></h1>
+    </header><!-- .entry-header -->
+{%- endmacro %}

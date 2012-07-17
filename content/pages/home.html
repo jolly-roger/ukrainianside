@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% from "macroses/header.macro" import header as header%}
+{% from "macroses/footer.macro" import footer as footer%}
+
+
 {% block mainContent %}
 	<div id="main">
 		<div id="primary">
@@ -7,12 +11,7 @@
 
 
 	<article id="post-200" class="post-157 post type-post status-publish format-standard hentry category-information">
-		<header class="entry-header">
-			<h1 class="entry-title">
-				<a href="{{ getAticleUrlByAlias('trip-to-kinburn-peninsula') }}"
-				   title="Permalink to Поездка на Кинбурнский полуостров" 
-				   rel="bookmark">Поездка на Кинбурнский полуостров</a></h1>
-		</header><!-- .entry-header -->
+		{{header('trip-to-kinburn-peninsula')}}
 		<div class="entry-content">
 			<p>И вот пришёл тот долгожданный день начала путешествия на Кинбурнский полуостров, рюкзак уже был собран,
 			большей частью, неделю назад, и утром я только доукладывал немногие оставшиеся уложенными вещи,
@@ -20,22 +19,14 @@
 			вокзал.</p>
 			<p> <a href="{{ getAticleUrlByAlias('trip-to-kinburn-peninsula') }}#more-200"
 				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
-		</div><!-- .entry-content -->		
-		<footer class="entry-meta">
-			<span class="cat-links">
-				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span>
-				<a href="{{ getCategoryUrlByAlias('nature') }}" title="View all posts in Природа"
-				   rel="category tag">Природа</a>
-			</span>
-		</footer><!-- #entry-meta -->
+		</div><!-- .entry-content -->
+		{{footer(getCategoryUrlByAlias('nature'), getCategoryNameByAlias('nature'))}}
 	</article><!-- #post-200 -->			
 				
 								
 					
 	<article id="post-157" class="post-157 post type-post status-publish format-standard hentry category-information">
-		<header class="entry-header">
-			<h1 class="entry-title"><a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}" title="Permalink to Национальный археологический заповедник “Ольвия”" rel="bookmark">Национальный археологический заповедник “Ольвия”</a></h1>
-		</header><!-- .entry-header -->
+		{{header('national-archaeological-park-olbia')}}
 		<div class="entry-content">
 			<p>В сорока километрах от Николаева, на высоком холмистом берегу 
 			Бужского лимана, находиться место, которое уже много десятилетий 
@@ -43,20 +34,14 @@
 			 археологический заповедник “Ольвия”, которому в 2002 году Указом 
 			Президента Украины присвоено статус национального.</p>
 			<p> <a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}#more-157" class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
-		</div><!-- .entry-content -->		
-		<footer class="entry-meta">
-			<span class="cat-links">
-				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span> <a href="{{ getCategoryUrlByAlias('information') }}" title="View all posts in Информация" rel="category tag">Информация</a>
-			</span>
-		</footer><!-- #entry-meta -->
+		</div><!-- .entry-content -->
+		{{footer(getCategoryUrlByAlias('information'), getCategoryNameByAlias('information'))}}
 	</article><!-- #post-157 -->
 
 				
 					
 	<article id="post-73" class="post-73 post type-post status-publish format-standard hentry category-towns">
-		<header class="entry-header">
-			<h1 class="entry-title"><a href="{{ getAticleUrlByAlias('one-day-in-odessa') }}" title="Permalink to Один день в Одессе" rel="bookmark">Один день в Одессе</a></h1>
-		</header><!-- .entry-header -->
+		{{header('one-day-in-odessa')}}
 		<div class="entry-content">
 			<p>Главной целью этой поездки было разузнать как из Одессы добраться в
 			Белгород-Днестровский, так как прямых рейсов поездов на сайте 
@@ -65,35 +50,23 @@
 		   немного по осенней Одессе <img src="/content/icons/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
 		   <p> <a href="{{ getAticleUrlByAlias('one-day-in-odessa') }}#more-73" class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
 		</div><!-- .entry-content -->
-		<footer class="entry-meta">
-			<span class="cat-links">
-				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span> <a href="{{ getCategoryUrlByAlias('towns') }}" title="View all posts in Города" rel="category tag">Города</a>
-			</span>
-		</footer><!-- #entry-meta -->
+		{{footer(getCategoryUrlByAlias('towns'), getCategoryNameByAlias('towns'))}}
 	</article><!-- #post-73 -->
 
 				
 					
 	<article id="post-93" class="post-93 post type-post status-publish format-standard hentry category-information">
-		<header class="entry-header">
-			<h1 class="entry-title"><a href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}" title="Permalink to Расписание пригородных поездов Одесского региона" rel="bookmark">Расписание пригородных поездов Одесского региона</a></h1>
-		</header><!-- .entry-header -->
+		{{header('odessa-region-trains-timetable')}}
 		<div class="entry-content">
 			<p> <a href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}#more-93" class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
 		</div><!-- .entry-content -->
-		<footer class="entry-meta">
-			<span class="cat-links">
-				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span> <a href="{{ getCategoryUrlByAlias('information') }}" title="View all posts in Информация" rel="category tag">Информация</a>
-			</span>
-		</footer><!-- #entry-meta -->
+		{{footer(getCategoryUrlByAlias('information'), getCategoryNameByAlias('information'))}}
 	</article><!-- #post-93 -->
 
 				
 					
 	<article id="post-41" class="post-41 post type-post status-publish format-standard hentry category-greek">
-		<header class="entry-header">
-			<h1 class="entry-title"><a href="{{ getAticleUrlByAlias('trip-to-olbia') }}" title="Permalink to Поездка в Ольвию" rel="bookmark">Поездка в Ольвию</a></h1>
-		</header><!-- .entry-header -->
+		{{header('trip-to-olbia')}}
 		<div class="entry-content">
 			<p>Эта поездка была моей первой которая предполагала путешествие не 
 			на прямую в нужную точку а с пересадками, конечно тот кто отправляется в
@@ -105,19 +78,13 @@
 			мере, но в следующие разы обещаю исправиться <img src="/content/icons/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
 			<p> <a href="{{ getAticleUrlByAlias('trip-to-olbia') }}#more-41" class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
 		</div><!-- .entry-content -->
-		<footer class="entry-meta">
-			<span class="cat-links">
-				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span> <a href="{{ getCategoryUrlByAlias('greek') }}" title="View all posts in Греческие" rel="category tag">Греческие</a>
-			</span>
-		</footer><!-- #entry-meta -->
+		{{footer(getCategoryUrlByAlias('greek'), getCategoryNameByAlias('greek'))}}
 	</article><!-- #post-41 -->
 
 				
 					
 	<article id="post-5" class="post-5 post type-post status-publish format-standard hentry category-general">
-		<header class="entry-header">
-			<h1 class="entry-title"><a href="{{ getAticleUrlByAlias('introduction') }}" title="Permalink to Предисловие" rel="bookmark">Предисловие</a></h1>
-		</header><!-- .entry-header -->
+		{{header('introduction')}}
 		<div class="entry-content">
 			<p>Этим постом я хотел бы немного расказать зачем я начал этот блог.</p>
 			<p>Так вот, всё началось с того что в начале я начал интересоваться 
@@ -132,13 +99,7 @@
 			другими, что бы им было легче открывать для себя эти уголки нашей 
 			страны.</p>
 		</div><!-- .entry-content -->
-		<footer class="entry-meta">
-			<span class="cat-links">
-				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span>
-				<a href="{{ getCategoryUrlByAlias('general') }}" title="View all posts in Общее" rel="category tag">Общее</a>
-			</span>
-			
-		</footer><!-- #entry-meta -->
+		{{footer(getCategoryUrlByAlias('general'), getCategoryNameByAlias('general'))}}
 	</article><!-- #post-5 -->
 
 				

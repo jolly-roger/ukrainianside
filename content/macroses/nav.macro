@@ -1,8 +1,7 @@
+{% from "macroses/social.macro" import social as social%}
+
 {% macro nav(currentUrl = none, prevUrl = none, nextUrl = none) -%}
-    {% if not currentUrl is none %}
-        <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
-             data-layout="button_count" data-width="450" data-show-faces="false"></div>
-    {% endif %}
+    {{social(currentUrl)}}
 
     <nav id="nav-single">
         {% if not prevUrl is  none%}

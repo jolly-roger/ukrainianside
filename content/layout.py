@@ -22,6 +22,7 @@ def getenv():
         env.globals["getAticleUrlByAlias"] = urls.getAticleUrlByAlias
         
         env.globals["getCategoryNameByAlias"] = names.getCategoryNameByAlias
+        env.globals["getAticleNameByAlias"] = names.getAticleNameByAlias
         
     return env
 
