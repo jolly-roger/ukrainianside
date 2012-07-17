@@ -1,6 +1,5 @@
 {% macro social(currentUrl) -%}
     {% if not currentUrl is none %}
-        test
         <table>
             <tr>
                 <td>
@@ -8,12 +7,7 @@
                         data-layout="button_count" data-width="450" data-show-faces="false"></div>
                 </td>
                 <td>
-                    <div id="vktest"></div>
-                    <script type="text/javascript">
-                        //$(function(){
-                        //    VK.Widgets.Like("vk_like", {type: "button"});
-                        //});
-                    </script>    
+                        
                 </td>
             </tr>
         </table>
