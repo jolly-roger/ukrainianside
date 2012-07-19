@@ -18,7 +18,7 @@
                                 height: 20,
                                 pageUrl: "{{getAticleUrlByAlias(aticleAlias)}}",
                                 pageTitle: "{{getAticleNameByAlias(aticleAlias)}}",
-                                pageDescription: "{{getAticleDescByAlias(aticleAlias)}}",
+                                //pageDescription: "{{getAticleDescByAlias(aticleAlias)}}",
                             });
                         });
                     </script>    
