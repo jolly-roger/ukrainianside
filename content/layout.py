@@ -5,6 +5,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from data import urls
 from data import names
+from data import descriptions
 
 
 env = None
@@ -26,6 +27,8 @@ def getenv():
         env.globals["getAticleNameByAlias"] = names.getAticleNameByAlias
         
         env.globals["randint"] = random.randint
+        
+        env.globals["getAticleDescByAlias"] = descriptions.getAticleDescByAlias
         
     return env
 
@@ -50,10 +53,6 @@ def getVisitBilhorodDnistrovskyi():
 
 def getOdessaRegionTrainsTimetable():
     tmpl = getenv().get_template("pages/odessa-region-trains-timetable.html")
-    return tmpl.render()
-
-def getIntroduction():
-    tmpl = getenv().get_template("pages/introduction.html")
     return tmpl.render()
 
 def getNationalArchaeologicalParkOlbia():

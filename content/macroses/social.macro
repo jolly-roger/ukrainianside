@@ -1,4 +1,4 @@
-{% macro social(currentUrl) -%}
+{% macro social(aticleAlias) -%}
     {% if not currentUrl is none %}
         {% set rand0 = randint(0, 99999) %}
         {% set rand1 = randint(0, 99999) %}
@@ -6,7 +6,7 @@
         <table>
             <tr>
                 <td>
-                    <div class="fb-like" data-href="{{currentUrl}}" data-send="false"
+                    <div class="fb-like" data-href="{{getAticleUrlByAlias(aticleAlias)}}" data-send="false"
                         data-layout="button_count" data-width="50" data-show-faces="false"></div>
                 </td>
                 <td>
@@ -16,7 +16,9 @@
                             VK.Widgets.Like("vk-like-{{rand0}}-{{rand1}}-{{rand2}}", {
                                 type: "button",
                                 height: 20,
-                                pageUrl: "{{currentUrl}}"
+                                pageUrl: "{{getAticleUrlByAlias(aticleAlias)}}",
+                                pageTitle: "{{getAticleNameByAlias(aticleAlias)}}",
+                                pageDescription: "{{getAticleDescByAlias(aticleAlias)}}",
                             });
                         });
                     </script>    

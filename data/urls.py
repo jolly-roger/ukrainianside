@@ -16,8 +16,7 @@ articles = {
     'trip-to-kinburn-peninsula': 'http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/',
     'one-day-in-odessa': 'http://ukrainianside.com/2011/towns/one-day-in-odessa/',
     'odessa-region-trains-timetable': 'http://ukrainianside.com/2011/information/odessa-region-trains-timetable/',
-    'national-archaeological-park-olbia': 'http://ukrainianside.com/2012/information/national-archaeological-park-olbia/',
-    'introduction': 'http://ukrainianside.com/2011/general/introduction/'
+    'national-archaeological-park-olbia': 'http://ukrainianside.com/2012/information/national-archaeological-park-olbia/'
 }
 
 def getAticleUrlByAlias(alias):

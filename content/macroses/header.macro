@@ -6,6 +6,6 @@
             <a href="{{ getAticleUrlByAlias(aticleAlias) }}"
                title="Постоянная ссылка на {{getAticleNameByAlias(aticleAlias)}}" 
                rel="bookmark">{{getAticleNameByAlias(aticleAlias)}}</a></h1>
-        {{social(getAticleUrlByAlias(aticleAlias))}}
+        {{social(aticleAlias)}}
     </header><!-- .entry-header -->
 {%- endmacro %}

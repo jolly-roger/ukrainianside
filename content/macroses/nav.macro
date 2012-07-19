@@ -1,19 +1,19 @@
 {% from "macroses/social.macro" import social as social%}
 
-{% macro nav(currentUrl = none, prevUrl = none, nextUrl = none) -%}
-    {{social(currentUrl)}}
+{% macro nav(aticleAlias, prevAlias = none, nextAlias = none) -%}
+    {{social(aticleAlias)}}
 
     <nav id="nav-single">
-        {% if not prevUrl is  none%}
+        {% if not prevAlias is  none%}
             <span class="nav-previous">
-                <a href="{{prevUrl}}" rel="prev">
+                <a href="{{getAticleUrlByAlias(prevAlias)}}" rel="prev">
                     <span class="meta-nav">←</span> Предыдущая</a>
             </span>
         {% endif %}
             
-        {% if not nextUrl is none %}
+        {% if not nextAlias is none %}
             <span class="nav-next">
-                <a href="{{nextUrl}}" rel="next">Следующая <span class="meta-nav">→</span></a>
+                <a href="{{getAticleUrlByAlias(nextAlias)}}" rel="next">Следующая <span class="meta-nav">→</span></a>
             </span>
         {% endif %}
     </nav><!-- #nav-single -->

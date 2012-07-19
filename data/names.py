@@ -17,8 +17,7 @@ articles = {
     'trip-to-kinburn-peninsula': 'Поездка на Кинбурнский полуостров',
     'one-day-in-odessa': 'Один день в Одессе',
     'odessa-region-trains-timetable': 'Расписание пригородных поездов Одесского региона',
-    'national-archaeological-park-olbia': 'Национальный археологический заповедник “Ольвия”',
-    'introduction': 'Предисловие'
+    'national-archaeological-park-olbia': 'Национальный археологический заповедник “Ольвия”'
 }
 
 def getAticleNameByAlias(alias):

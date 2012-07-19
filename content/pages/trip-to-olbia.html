@@ -6,7 +6,6 @@
 
 {% block headerContent %}
 <title>Поездка в Ольвию | Украинская сторонка</title>
-<link rel="prev" title="Предисловие" href="{{ getAticleUrlByAlias('introduction') }}">
 <link rel="next" title="Расписание пригородных поездов Одесского региона" href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}">
 <link rel="canonical" href="{{ getAticleUrlByAlias('trip-to-olbia') }}">
 {% endblock %}
@@ -18,8 +17,7 @@
 	<div id="main">
 		<div id="primary">
 			<div id="content" role="main">
-				{{ nav(getAticleUrlByAlias('trip-to-olbia'), getAticleUrlByAlias('introduction'),
-					getAticleUrlByAlias('odessa-region-trains-timetable')) }}
+				{{ nav('trip-to-olbia', none, 'odessa-region-trains-timetable') }}
 				
 <article id="post-41" class="post-41 post type-post status-publish format-standard hentry category-greek">
 	<header class="entry-header">
