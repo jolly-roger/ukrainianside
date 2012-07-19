@@ -10,11 +10,14 @@
                         data-layout="button_count" data-width="50" data-show-faces="false"></div>
                 </td>
                 <td>
-                    <div id="vk-like-{{rand0}}-{{rand1}}-{{rand2}}" class="fb_edge_widget_with_comment fb_iframe_widget"></div>
+                    <div id="vk-like-{{rand0}}-{{rand1}}-{{rand2}}"></div>
                     <script type="text/javascript">
                         jQuery(document).ready(function(){
-                            VK.Widgets.Like("vk-like-{{rand0}}-{{rand1}}-{{rand2}}",
-                                {type: "button", height: 20, pageUrl: "{{currentUrl}}"});
+                            VK.Widgets.Like("vk-like-{{rand0}}-{{rand1}}-{{rand2}}", {
+                                type: "button",
+                                height: 20,
+                                pageUrl: "{{currentUrl}}"
+                            });
                         });
                     </script>    
                 </td>

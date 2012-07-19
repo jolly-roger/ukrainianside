@@ -26,6 +26,8 @@ class ukrainianside(object):
             return layout.getOneDayInOdessa()
         elif year == '2011' and category == 'old-ruins' and subcategory == 'greek' and title == 'trip-to-olbia':
             return layout.getTripToOlbia()
+        elif year == '2011' and category == 'old-ruins' and subcategory == 'greek' and title == 'visit-bilhorod-dnistrovskyi':
+            return layout.getVisitBilhorodDnistrovskyi()
         elif year == '2011' and category == 'information' and subcategory == 'odessa-region-trains-timetable' and title is None:
             return layout.getOdessaRegionTrainsTimetable()
         elif year == '2011' and category == 'general' and subcategory == 'introduction' and title is None:

@@ -12,6 +12,7 @@ def getCategoryNameByAlias(alias):
 
 
 articles = {
+    'visit-bilhorod-dnistrovskyi': 'Посещение Белгород-Днестровского',
     'trip-to-olbia': 'Поездка в Ольвию',
     'trip-to-kinburn-peninsula': 'Поездка на Кинбурнский полуостров',
     'one-day-in-odessa': 'Один день в Одессе',

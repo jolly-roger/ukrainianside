@@ -44,6 +44,10 @@ def getTripToOlbia():
     tmpl = getenv().get_template("pages/trip-to-olbia.html")
     return tmpl.render()
 
+def getVisitBilhorodDnistrovskyi():
+    tmpl = getenv().get_template("pages/visit-bilhorod-dnistrovskyi.html")
+    return tmpl.render()
+
 def getOdessaRegionTrainsTimetable():
     tmpl = getenv().get_template("pages/odessa-region-trains-timetable.html")
     return tmpl.render()

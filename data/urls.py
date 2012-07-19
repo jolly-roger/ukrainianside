@@ -11,6 +11,7 @@ def getCategoryUrlByAlias(alias):
     return categories[alias]
 
 articles = {
+    'visit-bilhorod-dnistrovskyi': 'http://ukrainianside.com/2012/old-ruins/greek/visit-bilhorod-dnistrovskyi/',
     'trip-to-olbia': 'http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/',
     'trip-to-kinburn-peninsula': 'http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/',
     'one-day-in-odessa': 'http://ukrainianside.com/2011/towns/one-day-in-odessa/',
