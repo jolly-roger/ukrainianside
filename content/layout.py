@@ -22,11 +22,9 @@ def getenv():
         env.globals["postedIn"] = "Опубликована в "
         env.globals["continueReading"] = "Читать далее "
         
-        env.globals["getCategoryUrlByAlias"] = urls.getCategoryUrlByAlias
-        env.globals["getAticleUrlByAlias"] = urls.getAticleUrlByAlias
+        env.globals["getUrlByAlias"] = urls.getUrlByAlias
         
-        env.globals["getCategoryNameByAlias"] = names.getCategoryNameByAlias
-        env.globals["getAticleNameByAlias"] = names.getAticleNameByAlias
+        env.globals["getNameByAlias"] = names.getNameByAlias
         
         env.globals["randint"] = random.randint
         

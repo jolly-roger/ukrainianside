@@ -6,14 +6,14 @@
     <nav id="nav-single">
         {% if not prevAlias is  none%}
             <span class="nav-previous">
-                <a href="{{getAticleUrlByAlias(prevAlias)}}" rel="prev">
+                <a href="{{getUrlByAlias(prevAlias)}}" rel="prev">
                     <span class="meta-nav">←</span> Предыдущая</a>
             </span>
         {% endif %}
             
         {% if not nextAlias is none %}
             <span class="nav-next">
-                <a href="{{getAticleUrlByAlias(nextAlias)}}" rel="next">Следующая <span class="meta-nav">→</span></a>
+                <a href="{{getUrlByAlias(nextAlias)}}" rel="next">Следующая <span class="meta-nav">→</span></a>
             </span>
         {% endif %}
     </nav><!-- #nav-single -->

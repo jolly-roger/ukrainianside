@@ -1,8 +1,8 @@
 {% macro footer(aticleAlias) -%}
     <footer class="entry-meta">
 		{{ postedIn }}
-		<a href="{{getCategoryUrlByAlias(getCategoryAliasByAticleAlias(aticleAlias))}}"
-			title="Просмотреть все заметки в {{getCategoryNameByAlias(getCategoryAliasByAticleAlias(aticleAlias))}}"
-			rel="category tag">{{getCategoryNameByAlias(getCategoryAliasByAticleAlias(aticleAlias))}}</a>
+		<a href="{{getUrlByAlias(getCategoryAliasByAticleAlias(aticleAlias))}}"
+			title="Просмотреть все заметки в {{getNameByAlias(getCategoryAliasByAticleAlias(aticleAlias))}}"
+			rel="category tag">{{getNameByAlias(getCategoryAliasByAticleAlias(aticleAlias))}}</a>
 	</footer><!-- .entry-meta -->
 {%- endmacro %}

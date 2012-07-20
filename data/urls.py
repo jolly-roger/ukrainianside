@@ -1,23 +1,15 @@
-categories = {
-    'general': 'http://ukrainianside.com/category/general/',
-    'greek': 'http://ukrainianside.com/category/old-ruins/greek/',
-    'information': 'http://ukrainianside.com/category/information/',
-    'nature': 'http://ukrainianside.com/category/nature/',
-    'towns': 'http://ukrainianside.com/category/towns/'
-}
+import sqlite3
 
 
-def getCategoryUrlByAlias(alias):
-    return categories[alias]
-
-articles = {
-    'visit-bilhorod-dnistrovskyi': 'http://ukrainianside.com/2012/old-ruins/greek/visit-bilhorod-dnistrovskyi/',
-    'trip-to-olbia': 'http://ukrainianside.com/2011/old-ruins/greek/trip-to-olbia/',
-    'trip-to-kinburn-peninsula': 'http://ukrainianside.com/2012/nature/trip-to-kinburn-peninsula/',
-    'one-day-in-odessa': 'http://ukrainianside.com/2011/towns/one-day-in-odessa/',
-    'odessa-region-trains-timetable': 'http://ukrainianside.com/2011/information/odessa-region-trains-timetable/',
-    'national-archaeological-park-olbia': 'http://ukrainianside.com/2012/information/national-archaeological-park-olbia/'
-}
-
-def getAticleUrlByAlias(alias):
-    return articles[alias]
+def getUrlByAlias(alias):
+    conn = sqlite3.connect("./data/data.db")
+    cur = conn.cursor()
+        
+    cur.execute("select u.value from aliases as a, urls as u, relation as r "\
+        "where a.id = r.alias_id and u.id = r.url_id and a.value = ?;", (alias, ))
+    rawUrl = cur.fetchone()
+        
+    cur.close()
+    conn.close()
+    
+    return rawUrl[0]
