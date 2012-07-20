@@ -8,96 +8,26 @@
 	<div id="main">
 		<div id="primary">
 			<div id="content" role="main">
-
-
-	<article class="post type-post status-publish format-standard hentry">
-		{{header('trip-to-kinburn-peninsula')}}
-		<div class="entry-content">
-			<p>{{getAticleDescByAlias('trip-to-kinburn-peninsula')}}</p>
-			<p>
-				<a href="{{ getAticleUrlByAlias('trip-to-kinburn-peninsula') }}#more"
-					class="more-link">{{continueReading}}<span class="meta-nav">→</span></a>
-			</p>
-		</div><!-- .entry-content -->
-		{{footer('trip-to-kinburn-peninsula')}}
-	</article>
-	
-	
-	<article class="post type-post status-publish format-standard hentry">
-		{{header('visit-bilhorod-dnistrovskyi')}}
-		<div class="entry-content">
-			<p>{{getAticleDescByAlias('visit-bilhorod-dnistrovskyi')}}</p>
-			<p>
-				<a href="{{ getAticleUrlByAlias('visit-bilhorod-dnistrovskyi') }}#more"
-				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a>
-			</p>
-		</div><!-- .entry-content -->
-		{{footer('visit-bilhorod-dnistrovskyi')}}
-	</article>
-				
-								
-					
-	<article class="post type-post status-publish format-standard hentry">
-		{{header('national-archaeological-park-olbia')}}
-		<div class="entry-content">
-			<p>{{getAticleDescByAlias('national-archaeological-park-olbia')}}</p>
-			<p>
-				<a href="{{ getAticleUrlByAlias('national-archaeological-park-olbia') }}#more"
-				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a>
-			</p>
-		</div><!-- .entry-content -->
-		{{footer('national-archaeological-park-olbia')}}
-	</article>
-
-				
-					
-	<article class="post type-post status-publish format-standard hentry">
-		{{header('one-day-in-odessa')}}
-		<div class="entry-content">
-			<p>{{getAticleDescByAlias('one-day-in-odessa')}}</p>
-			<p>
-				<a href="{{ getAticleUrlByAlias('one-day-in-odessa') }}#more"
-				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a>
-			</p>
-		</div><!-- .entry-content -->
-		{{footer('one-day-in-odessa')}}
-	</article>
-
-				
-					
-	<article class="post type-post status-publish format-standard hentry">
-		{{header('odessa-region-trains-timetable')}}
-		<div class="entry-content">
-			<p> <a href="{{ getAticleUrlByAlias('odessa-region-trains-timetable') }}#more"
-				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
-		</div><!-- .entry-content -->
-		{{footer('odessa-region-trains-timetable')}}
-	</article>
-
-				
-					
-	<article class="post type-post status-publish format-standard hentry">
-		{{header('trip-to-olbia')}}
-		<div class="entry-content">
-			<p>{{getAticleDescByAlias('trip-to-olbia')}}</p>
-			<p>
-				<a href="{{ getAticleUrlByAlias('trip-to-olbia') }}#more"
-				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a>
-			</p>
-		</div><!-- .entry-content -->
-		{{footer('trip-to-olbia')}}
-	</article>
-
-				
-				
-			
+			{% for aticleAlias, aticleOrder in aticleOrder.items() %}
+				<article class="post type-post status-publish format-standard hentry">
+					{{header(aticleAlias)}}
+					<div class="entry-content">
+						<p>{{getAticleDescByAlias(aticleAlias)}}</p>
+						<p>
+							<a href="{{ getAticleUrlByAlias(aticleAlias) }}#more"
+								class="more-link">{{continueReading}}<span class="meta-nav">→</span></a>
+						</p>
+					</div><!-- .entry-content -->
+					{{footer(aticleAlias)}}
+				</article>
+			{% endif%}
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
 		<div id="secondary" class="widget-area" role="complementary">
-							<aside class="widget">
+			<aside class="widget">
 
-				</aside>
+			</aside>
 		</div><!-- #secondary .widget-area -->
 
 	</div><!-- #main -->

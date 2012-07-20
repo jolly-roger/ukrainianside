@@ -7,6 +7,7 @@ from data import urls
 from data import names
 from data import descriptions
 from data import categories
+from data import aticleOrder
 
 
 env = None
@@ -32,6 +33,8 @@ def getenv():
         env.globals["getAticleDescByAlias"] = descriptions.getAticleDescByAlias
         
         env.globals["getCategoryAliasByAticleAlias"] = categories.getCategoryAliasByAticleAlias
+        
+        env.globals["aticleOrder"] = aticleOrder.articleOrder
         
     return env
 
