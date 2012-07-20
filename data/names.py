@@ -2,7 +2,7 @@ import sqlite3
 
 
 def getNameByAlias(alias):
-    conn = sqlite3.connect("./db/user.db")
+    conn = sqlite3.connect("./data/data.db")
     cur = self.conn.cursor()
         
     cur.execute("select n.value from aliases as a, names as n, alias_name as a_n "\
