@@ -1,24 +1,21 @@
-categories = {
-    'general': 'Общее',
-    'greek': 'Греческое',
-    'information': 'Информация',
-    'nature': 'Природа',
-    'towns': 'Города'
-}
+import sqlite3
 
+
+def getNameByAlias(alias):
+    conn = sqlite3.connect("./db/user.db")
+    cur = self.conn.cursor()
+        
+    cur.execute("select n.value from aliases as a, names as n, alias_name as a_n "\
+        "where a.id = a_n.alias_id and n.id = a_n.name_id and a.value = ?;", (alias, ))
+    rawName = cur.fetchone()
+        
+    cur.close()
+    conn.close()
+    
+    return rawName[0]
 
 def getCategoryNameByAlias(alias):
-    return categories[alias]
-
-
-articles = {
-    'visit-bilhorod-dnistrovskyi': 'Посещение Белгород-Днестровского',
-    'trip-to-olbia': 'Поездка в Ольвию',
-    'trip-to-kinburn-peninsula': 'Поездка на Кинбурнский полуостров',
-    'one-day-in-odessa': 'Один день в Одессе',
-    'odessa-region-trains-timetable': 'Расписание пригородных поездов Одесского региона',
-    'national-archaeological-park-olbia': 'Национальный археологический заповедник “Ольвия”'
-}
+    return getNameByAlias(alias)
 
 def getAticleNameByAlias(alias):
-    return articles[alias]
+    return getNameByAlias(alias)
