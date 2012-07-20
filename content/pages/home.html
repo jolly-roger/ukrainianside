@@ -8,7 +8,7 @@
 	<div id="main">
 		<div id="primary">
 			<div id="content" role="main">
-			{% for aticleOrder, aticleAlias in aticleOrder.items() %}
+			{% for aticleAlias in aticleOrder %}
 				<article class="post type-post status-publish format-standard hentry">
 					{{header(aticleAlias)}}
 					<div class="entry-content">

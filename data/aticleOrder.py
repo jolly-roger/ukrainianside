@@ -1,8 +1,8 @@
-articleOrder = {
-    0: 'trip-to-olbia',
-    1: 'odessa-region-trains-timetable',
-    2: 'national-archaeological-park-olbia',
-    3: 'one-day-in-odessa',
-    4: 'visit-bilhorod-dnistrovskyi',
-    5: 'trip-to-kinburn-peninsula',
-}
+articleOrder = [
+    'trip-to-kinburn-peninsula',
+    'visit-bilhorod-dnistrovskyi',
+    'national-archaeological-park-olbia',
+    'one-day-in-odessa',
+    'odessa-region-trains-timetable',
+    'trip-to-olbia',
+]
