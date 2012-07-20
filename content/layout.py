@@ -31,7 +31,7 @@ def getenv():
         
         env.globals["getAticleDescByAlias"] = descriptions.getAticleDescByAlias
         
-        env.globals["getCategoryNameByAticleAlias"] = categories.getCategoryNameByAticleAlias
+        env.globals["getCategoryAliasByAticleAlias"] = categories.getCategoryAliasByAticleAlias
         
     return env
 

@@ -8,5 +8,5 @@ categories = {
 }
 
 
-def getCategoryNameByAticleAlias(alias):
+def getCategoryAliasByAticleAlias(alias):
     return categories[alias]
