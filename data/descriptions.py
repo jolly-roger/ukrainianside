@@ -10,7 +10,3 @@ articles = {
 def getAticleDescByAlias(alias):
     return articles[alias]
 	
-	
-	
-	
-	
