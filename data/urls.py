@@ -1,8 +1,9 @@
 import sqlite3
+import cherrypy
 
 
 def getUrlByAlias(alias):
-    conn = sqlite3.connect("./data/data.db")
+    conn = sqlite3.connect(cherrypy.request.app.config["ukrainianside"]["base_dir"] + "data/data.db")
     cur = conn.cursor()
         
     cur.execute("select u.value from aliases as a, urls as u, relation as r "\
