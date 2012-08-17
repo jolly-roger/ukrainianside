@@ -90,3 +90,7 @@ def getGreek():
 def getNature():
     tmpl = getenv().get_template("pages/nature.html")
     return tmpl.render()
+
+def getTrakking():
+    tmpl = getenv().get_template("pages/trakking.html")
+    return tmpl.render()

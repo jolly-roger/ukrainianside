@@ -47,6 +47,8 @@ class ukrainianside(object):
             return layout.getGreek()
         elif year == 'category' and category == 'nature' and subcategory is None and title is None:
             return layout.getNature()
+        elif year == 'category' and category == 'trakking' and subcategory is None and title is None:
+            return layout.getTrakking()
         else:
             return layout.getHome()
 
