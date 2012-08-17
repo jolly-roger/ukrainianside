@@ -67,6 +67,10 @@ def getTripToKinburnPeninsula():
     tmpl = getenv().get_template("pages/trip-to-kinburn-peninsula.html")
     return tmpl.render()
 
+def getListOfGoodsOfMyFirstTrakking():
+    tmpl = getenv().get_template("pages/list-of-goods-of-my-first-trakking")
+    return tmpl.render()
+
 def getTowns():
     tmpl = getenv().get_template("pages/towns.html")
     return tmpl.render()

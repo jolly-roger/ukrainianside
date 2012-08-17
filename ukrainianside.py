@@ -34,6 +34,9 @@ class ukrainianside(object):
             return layout.getNationalArchaeologicalParkOlbia()
         elif year == '2012' and category == 'nature' and subcategory == 'trip-to-kinburn-peninsula' and title is None:
             return layout.getTripToKinburnPeninsula()
+        elif year == '2012' and category == 'trakking' and subcategory == 'list-of-goods-of-my-first-trakking' and \
+            title is None:
+            return layout.getListOfGoodsOfMyFirstTrakking()        
         elif year == 'category' and category == 'towns' and subcategory is None and title is None:
             return layout.getTowns()
         elif year == 'category' and category == 'information' and subcategory is None and title is None:
