@@ -92,5 +92,6 @@ def getNature():
     return tmpl.render()
 
 def getTrakking():
+    return 'hello'
     tmpl = getenv().get_template("pages/trakking.html")
     return tmpl.render()
