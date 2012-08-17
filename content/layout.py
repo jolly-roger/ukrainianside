@@ -68,7 +68,7 @@ def getTripToKinburnPeninsula():
     return tmpl.render()
 
 def getListOfGoodsOfMyFirstTrakking():
-    tmpl = getenv().get_template("pages/list-of-goods-of-my-first-trakking")
+    tmpl = getenv().get_template("pages/list-of-goods-of-my-first-trakking.html")
     return tmpl.render()
 
 def getTowns():
