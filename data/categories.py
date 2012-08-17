@@ -4,7 +4,8 @@ categories = {
     'trip-to-kinburn-peninsula': 'nature',
     'one-day-in-odessa': 'towns',
     'odessa-region-trains-timetable': 'information',
-    'national-archaeological-park-olbia': 'information'
+    'national-archaeological-park-olbia': 'information',
+    'list-of-goods-of-my-first-trakking': 'trakking'
 }
 
 
