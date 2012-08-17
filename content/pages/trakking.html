@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block headerContent %}
+<title>Пеший туризм | Украинская сторонка</title>
+{% endblock %}
+
+
+{% block bodyStyles %}archive category category-towns category-20 single-author two-column right-sidebar{% endblock %}
+
+{% block mainContent %}
+	<div id="main">
+		<section id="primary">
+			<div id="content" role="main">
+
+			
+				<header class="page-header">
+					<h1 class="page-title">Category Archives: <span>Пеший туризм</span></h1>
+				</header>
+    
+    
+    <article class="post type-post status-publish format-standard hentry">
+		<header class="entry-header">
+			<h1 class="entry-title">
+				<a href="{{ getUrlByAlias('list-of-goods-of-my-first-trakking') }}"
+				   title="Permalink to Список вещей моего первого похода" 
+				   rel="bookmark">Список вещей моего первого похода</a></h1>
+		</header><!-- .entry-header -->
+		<div class="entry-content">
+			<p>Одежда, обувь и снаряжение играют огромную роль в походе, от них зависит то как вы пройдёте весь маршрут,
+        и какие у вас останутся впечатления. Пожалуй, самый яркий пример этого, это водянки на ногах от неразношенной или
+        жёсткой или же неподходящей к условиям похода обуви. С фактом, что обувь может не подходить к условиям похода, я
+        впервые столкнулся в [поездке на Кинбурский полуостров].</p>
+			<p> <a href="{{ getUrlByAlias('list-of-goods-of-my-first-trakking') }}#more"
+				   class="more-link">{{continueReading}}<span class="meta-nav">→</span></a></p>
+		</div><!-- .entry-content -->		
+		<footer class="entry-meta">
+			<span class="cat-links">
+				<span class="entry-utility-prep entry-utility-prep-cat-links">{{ postedIn }}</span>
+				<a href="{{ getUrlByAlias('trakking') }}" title="View all posts in Пеший туризм"
+				   rel="category tag">Пеший туризм</a>
+			</span>
+		</footer><!-- #entry-meta -->
+	</article>
+
+				
+				
+			
+			</div><!-- #content -->
+		</section><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+							<aside class="widget">
+
+				</aside>
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+</div><!-- #page -->
+</body>
+{% endblock %}
