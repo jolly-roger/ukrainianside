@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% from "macroses/nav.macro" import nav as nav%}
+{% from "macroses/footer.macro" import footer as footer%}
+
+
+{% block headerContent %}
+<title>Список вещей моего первого похода | Украинская сторонка</title>
+<link rel="prev" title="Посещение Белгород-Днестровского" href="{{ getUrlByAlias('visit-bilhorod-dnistrovskyi') }}">
+<link rel="next" title="Поездка на Кинбурнский полуостров" href="{{ getUrlByAlias('trip-to-kinburn-peninsula') }}">
+<link rel="canonical" href="{{ getUrlByAlias('list-of-goods-of-my-first-trakking') }}">
+{% endblock %}
+
+
+{% block bodyStyles %}single single-post postid-73 single-format-standard single-author singular two-column right-sidebar{% endblock %}
+
+{% block mainContent %}
+	<div id="main">
+		<div id="primary">
+			<div id="content" role="main">
+				{{ nav('list-of-goods-of-my-first-trakking', 'visit-bilhorod-dnistrovskyi', 'trip-to-kinburn-peninsula') }}
+
+<article class="post type-post status-publish format-standard hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Список вещей моего первого похода</h1>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+        <p>Одежда, обувь и снаряжение играют огромную роль в походе, от них зависит то как вы пройдёте весь маршрут,
+        и какие у вас останутся впечатления. Пожалуй, самый яркий пример этого, это водянки на ногах от неразношенной или
+        жёсткой или же неподходящей к условиям похода обуви. С фактом, что обувь может не подходить к условиям похода, я
+        впервые столкнулся в [поездке на Кинбурский полуостров].</p>
+        <p><span id="more"></span></p>
+        <p>Как же я составлял список вещей для своего первого похода. За основу я взял рекомендации одного из
+        коммерческих организаторов походов и адаптировал его для себя опираясь на свой опыт различной другой
+        спортивной активности.</p>
+        <p>И так, список:            
+            <ul>
+                <li>Одежда:</li>
+                <li><ul>
+                    <li>три синтетические футболки</li>
+                    <li>двое штанов</li>
+                    <li>флиска (батник)</li>
+                    <li>куртка с капюшоном</li>
+                    <li>панамка</li>
+                    <li>тонкая синтетическая шапка</li>
+                    <li>тонкие синтетические перчатки</li>
+                    <li>бафик</li>
+                    <li>три пары носков</li>
+                    <li>три единицы нижнего белья</li>
+                </ul></li>
+                <li>Обувь:</li>
+                <li><ul>
+                    <li>низкие треккинги<li>
+                </ul></li>
+                <li>Снаряжение:</li>
+                <li><ul>
+                    <li>рюкзак</li>
+                    <li>палатка</li>
+                    <li>пенка (коремат, коврик)</li>
+                    <li>спальник</li>
+                    <li>ложка</li>
+                    <li>чашку</li>
+                    <li>фонарик (налобник)</li>
+                    <li>нож</li>
+                    <li>полтора литровую пластиковая бутылка</li>
+                </ul></li>
+                <li>Другое:</li>
+                <li><ul>
+                    <li>рулон туалетной бумаги</li>
+                    <li>мыло</li>
+                    <li>зубная щётка</li>
+                    <li>зубная паста</li>
+                    <li>личная мини аптечка</li>
+                    <li>телефон</li>
+                    <li>паспорт</li>
+                    <li>деньги :)</li>
+                </ul></li>
+            </ul>
+        </p>
+	</div><!-- .entry-content -->
+			
+			{{footer('list-of-goods-of-my-first-trakking')}}
+</article><!-- #post-73 -->
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+</div><!-- #page -->
+</body>
+{% endblock %}
