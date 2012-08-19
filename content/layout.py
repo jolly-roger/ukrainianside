@@ -36,6 +36,14 @@ def getenv():
         
     return env
 
+def getCategory(categoryName):
+    tmpl = getenv().get_template("pages/" + categoryName + ".html")
+    return tmpl.render()
+
+def getAticle(aticleName):
+    tmpl = getenv().get_template("pages/" + aticleName + ".html")
+    return tmpl.render()
+
 def getIndex():
     return getHome()
     
