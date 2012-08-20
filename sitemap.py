@@ -16,19 +16,14 @@ def getSitemap():
                 "<priority>1.0</priority>" \
             "</url>"
     
-    for alias, url in urls.articles.items():
+    allUrls = urls.getAll() 
+    
+    for url in allUrls:
         sitemap += "<url>" \
-                "<loc>" + url + "</loc>" \
+                "<loc>" + url[0] + "</loc>" \
                 "<lastmod>" + now + "</lastmod>" \
                 "<changefreq>daily</changefreq>" \
                 "<priority>1.0</priority>" \
-            "</url>"
-                
-    for alias, url in urls.categories.items():
-        sitemap += "<url>" \
-                "<loc>" + url + "</loc>" \
-                "<changefreq>weekly</changefreq>" \
-                "<priority>0.3</priority>" \
             "</url>"
 
     sitemap += "</urlset>"
