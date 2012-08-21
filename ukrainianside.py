@@ -1,6 +1,8 @@
 import cherrypy
 import os.path
+import smtplib
 from cherrypy import _cperror
+from email.mime.multipart import MIMEMultipart
 
 from content import layout
 
@@ -37,6 +39,23 @@ class ukrainianside(object):
 
 
 def error_page_default(status, message, traceback, version):
+    sender = 'www@dig-dns.com (www)'
+    recipient = 'roger@dig-dns.com'
+    
+    msg = MIMEMultipart()
+    msg['Subject'] = 'Ukrainianside error'
+    msg['From'] = sender
+    msg['To'] = recipient
+    
+    msg.attach(MIMEText('Status: ' + status, 'plain'))
+    msg.attach(MIMEText('Message: ' + message, 'plain'))
+    msg.attach(MIMEText('Traceback: ' + traceback, 'plain'))
+    msg.attach(MIMEText('Version: ' + version, 'plain'))
+    
+    s = smtplib.SMTP('localhost')
+    s.sendmail(sender, recipient, msg.as_string())
+    s.quit()
+    
     return "Error"
 
 cherrypy.config.update({'error_page.default': error_page_default})
