@@ -42,7 +42,7 @@ def error_page_default(status, message, traceback, version):
     sender = 'www@dig-dns.com (www)'
     recipient = 'roger@dig-dns.com'
     
-    text = 'URL: ' + cherrypy.request.request_line + '\n\n' +\
+    text = 'Request: ' + cherrypy.request.request_line + '\n\n' +\
         'Status: ' + status + '\n\n' + 'Message: ' + message + '\n\n' +\
         'Traceback: ' + traceback + '\n\n' + 'Version: ' + version
     
