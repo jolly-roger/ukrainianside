@@ -43,16 +43,14 @@ def error_page_default(status, message, traceback, version):
     sender = 'www@dig-dns.com (www)'
     recipient = 'roger@dig-dns.com'
     
-    msg = MIMEMultipart()
-    msg['Subject'] = 'Ukrainianside error'
-    msg['From'] = sender
-    msg['To'] = recipient
-    
     text = 'Status: ' + status + '\n\n' + 'Message: ' + message + '\n\n' +\
         'Traceback: ' + traceback + '\n\n' + 'Version: ' + version
     
-    msg.attach(MIMEText(text, 'plain'))
-    
+    msg = MIMEText(text)
+    msg['Subject'] = 'Ukrainianside error'
+    msg['From'] = sender
+    msg['To'] = recipient
+
     s = smtplib.SMTP('localhost')
     s.sendmail(sender, recipient, msg.as_string())
     s.quit()

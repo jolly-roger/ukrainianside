@@ -16,7 +16,7 @@ def getSitemap():
                 "<priority>1.0</priority>" \
             "</url>"
     
-    allUrls = urls.getAll() 
+    #allUrls = urls.getAll() 
     
     for url in allUrls:
         sitemap += "<url>" \
