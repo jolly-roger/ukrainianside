@@ -2,7 +2,6 @@ import cherrypy
 import os.path
 import smtplib
 from cherrypy import _cperror
-from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 from content import layout
