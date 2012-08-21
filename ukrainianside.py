@@ -48,10 +48,10 @@ def error_page_default(status, message, traceback, version):
     msg['From'] = sender
     msg['To'] = recipient
     
-    msg.attach(MIMEText('Status: ' + status, 'plain'))
-    msg.attach(MIMEText('Message: ' + message, 'plain'))
-    msg.attach(MIMEText('Traceback: ' + traceback, 'plain'))
-    msg.attach(MIMEText('Version: ' + version, 'plain'))
+    text = 'Status: ' + status + '\n\n' + 'Message: ' + message + '\n\n' +\
+        'Traceback: ' + traceback + '\n\n' + 'Version: ' + version
+    
+    msg.attach(MIMEText(text, 'plain'))
     
     s = smtplib.SMTP('localhost')
     s.sendmail(sender, recipient, msg.as_string())
