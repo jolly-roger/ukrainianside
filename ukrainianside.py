@@ -25,7 +25,7 @@ class ukrainianside(object):
     def default(self, year = None, category = None, subcategory = None, title = None, *args, **kwargs):
         als = aliases.getAll()
         
-        if category in als or subcategory in als or title in als:
+        if aliases.isExist(category, als) or aliases.isExist(subcategory, als) or aliases.isExist(title, als):
             if year == 'category':
                 if title is not None:
                     return layout.getCategory(title)
