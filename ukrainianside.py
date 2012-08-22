@@ -5,6 +5,7 @@ from cherrypy import _cperror
 from email.mime.text import MIMEText
 
 from content import layout
+from data import aliases
 
 import sitemap
 
@@ -22,20 +23,23 @@ class ukrainianside(object):
     
     @cherrypy.expose
     def default(self, year = None, category = None, subcategory = None, title = None, *args, **kwargs):
-        if year == 'category':
-            if title is not None:
-                return layout.getCategory(title)
-            elif subcategory is not None:
-                return layout.getCategory(subcategory)
-            elif category is not None:
-                return layout.getCategory(category)
-        else:
-            if title is not None:
-                return layout.getAticle(title)
-            elif subcategory is not None:
-                return layout.getAticle(subcategory)
+        als = aliases.getAll()
         
-        return layout.getHome()
+        if category in als or subcategory in als or title in als:
+            if year == 'category':
+                if title is not None:
+                    return layout.getCategory(title)
+                elif subcategory is not None:
+                    return layout.getCategory(subcategory)
+                elif category is not None:
+                    return layout.getCategory(category)
+            else:
+                if title is not None:
+                    return layout.getAticle(title)
+                elif subcategory is not None:
+                    return layout.getAticle(subcategory)
+        else:    
+            return layout.getHome()
 
 
 def error_page_default(status, message, traceback, version):
