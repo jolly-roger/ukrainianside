@@ -55,6 +55,8 @@ class ukrainianside(object):
     
     @cherrypy.expose
     def yandex_642ce14cc531b9fb_txt(self):
+        cherrypy.response.headers['Content-Type'] = 'text/plain'
+        
         return ''
 
 
