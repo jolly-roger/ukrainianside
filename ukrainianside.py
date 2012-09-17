@@ -52,6 +52,9 @@ class ukrainianside(object):
                     return layout.getAticle(subcategory)
         else:    
             return layout.getHome()
+    
+    def yandex_642ce14cc531b9fb_txt(self):
+        return ''
 
 
 def error_page_default(status, message, traceback, version):
