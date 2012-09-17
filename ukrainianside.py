@@ -53,6 +53,7 @@ class ukrainianside(object):
         else:    
             return layout.getHome()
     
+    @cherrypy.expose
     def yandex_642ce14cc531b9fb_txt(self):
         return ''
 
