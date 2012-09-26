@@ -19,6 +19,8 @@ class ukrainianside(object):
     
     @cherrypy.expose
     def robots_txt(self):
+        cherrypy.response.headers['Content-Type'] = 'text/plain'
+        
         return 'User-agent: * \n' + \
             'Disallow:';
     
