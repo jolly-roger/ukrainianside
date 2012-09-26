@@ -1,14 +1,18 @@
-categories = {
-    'visit-bilhorod-dnistrovskyi': 'greek',
-    'trip-to-olbia': 'greek',
-    'trip-to-kinburn-peninsula': 'nature',
-    'one-day-in-odessa': 'towns',
-    'odessa-region-trains-timetable': 'information',
-    'national-archaeological-park-olbia': 'information',
-    'chatyr-dag-yayla': 'information',
-    'list-of-goods-of-my-first-trakking': 'trakking'
-}
+import sqlite3
+import cherrypy
 
 
 def getCategoryAliasByAticleAlias(alias):
-    return categories[alias]
+    conn = sqlite3.connect(cherrypy.request.app.config["ukrainianside"]["base_dir"] + "data/data.db")
+    cur = conn.cursor()
+
+    cur.execute("select al1.value from aliases as al0, aliases as al1, aticles as at, categories as c, " + \
+        "category_aticle as ca "\
+        "where al0.id = at.alias_id and at.id = ca.aticle_id and ca.category_id = c.id and c.alias_id = al1.id " + \
+        "and al0.value = ?;", (alias, ))
+    rawAlias = cur.fetchone()
+
+    cur.close()
+    conn.close()
+    
+    return rawAlias[0]
