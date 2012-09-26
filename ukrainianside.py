@@ -15,7 +15,12 @@ class ukrainianside(object):
     def sitemap_xml(self):
         cherrypy.response.headers['Content-Type'] = "application/xml"
 
-        return sitemap.getSitemap() 
+        return sitemap.getSitemap()
+    
+    @cherrypy.expose
+    def robots_txt(self):
+        return 'User-agent: * \n' + \
+            'Disallow:';
     
     @cherrypy.expose
     def index(self):
