@@ -13,4 +13,9 @@ def getAticlesSeq():
     cur.close()
     conn.close()
     
-    return rawAticlesSeq
+    aliases = []
+    
+    for rawAlias in rawAticlesSeq:
+        aliases.append(rawAlias[0])
+    
+    return aliases
