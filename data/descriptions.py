@@ -7,7 +7,7 @@ def getAticleDescByAlias(alias):
 	cur = conn.cursor()
 	
 	cur.execute("select d.value from aliases as al, descs as d, aticles as at "\
-		"where al.id = at.alias_id and at.desc_id = d.id and a.value = ?;", (alias, ))
+		"where al.id = at.alias_id and at.desc_id = d.id and al.value = ?;", (alias, ))
 	rawDesc = cur.fetchone()
 	
 	cur.close()
