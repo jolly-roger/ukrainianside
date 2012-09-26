@@ -7,7 +7,7 @@ def getAticlesSeq():
     cur = conn.cursor()
         
     cur.execute("select al.value from aliases as al, aticles as at, seq "\
-        "where al.id = at.alias_id and at.id = seq.aticle_id order by seq.value;")
+        "where al.id = at.alias_id and at.id = seq.aticle_id order by seq.value desc;")
     rawAticlesSeq = cur.fetchall()
         
     cur.close()
