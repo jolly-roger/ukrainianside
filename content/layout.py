@@ -3,11 +3,7 @@ import random
 
 from jinja2 import Environment, FileSystemLoader
 
-from data import urls
-from data import names
-from data import descriptions
-from data import categories
-from data import aticleOrder
+import data
 
 
 env = None
@@ -22,17 +18,17 @@ def getenv():
         env.globals["postedIn"] = "Опубликована в "
         env.globals["continueReading"] = "Читать далее "
         
-        env.globals["getUrlByAlias"] = urls.getUrlByAlias
+        env.globals["getUrlByAlias"] = data.urls.getUrlByAlias
         
-        env.globals["getNameByAlias"] = names.getNameByAlias
+        env.globals["getNameByAlias"] = data.names.getNameByAlias
         
         env.globals["randint"] = random.randint
         
-        env.globals["getAticleDescByAlias"] = descriptions.getAticleDescByAlias
+        env.globals["getAticleDescByAlias"] = data.descs.getAticleDescByAlias
         
-        env.globals["getCategoryAliasByAticleAlias"] = categories.getCategoryAliasByAticleAlias
+        env.globals["getCategoryAliasByAticleAlias"] = data.categories.getCategoryAliasByAticleAlias
         
-        env.globals["aticleOrder"] = aticleOrder.articleOrder
+        env.globals["getAticlesSeq"] = data.seq.getAticlesSeq
         
     return env
 
