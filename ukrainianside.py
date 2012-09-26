@@ -80,10 +80,12 @@ def error_page_default(status, message, traceback, version):
     
     return "Error"
 
+cherrypy.tree.mount(ukrainianside())
+
 cherrypy.config.update({'error_page.default': error_page_default})
+cherrypy.config.update({'engine.autoreload_on':False})
 
 
-
-ukrainiansideconf = os.path.join(os.path.dirname(__file__), "ukrainianside.conf")
-
-cherrypy.quickstart(ukrainianside(), config=ukrainiansideconf)
+#ukrainiansideconf = os.path.join(os.path.dirname(__file__), "ukrainianside.conf")
+#
+#cherrypy.quickstart(ukrainianside(), config=ukrainiansideconf)
