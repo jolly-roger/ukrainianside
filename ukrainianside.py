@@ -18,13 +18,6 @@ class ukrainianside(object):
         return sitemap.getSitemap()
     
     @cherrypy.expose
-    def robots_txt(self):
-        cherrypy.response.headers['Content-Type'] = 'text/plain'
-        
-        return 'User-agent: * \n' + \
-            'Disallow:';
-    
-    @cherrypy.expose
     def index(self):
         return layout.getIndex()
     
