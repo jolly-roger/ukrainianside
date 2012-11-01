@@ -63,10 +63,7 @@ def error_page_default(status, message, traceback, version):
     req = urllib.request.Request('http://localhost:18404/sendmail')
     req.add_header('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8')
     res = urllib.request.urlopen(req, d)
-    resdata = res.read()
-    #return type(resdata)
-    
-    return 'Error'
+    return res.read()
 
 cherrypy.tree.mount(ukrainianside())
 
