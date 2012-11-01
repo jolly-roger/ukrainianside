@@ -56,15 +56,17 @@ class ukrainianside(object):
 
 
 def error_page_default(status, message, traceback, version):
-    d = urllib.parse.urlencode({'status': status, 'message': message, 'traceback': traceback, 'version': version,
-        'data': json.dumps({'subject': 'Ukrainianside error',
-            'base': cherrypy.request.base, 'request_line': cherrypy.request.request_line})})
-    d = d.encode('utf-8')
-    req = urllib.request.Request('http://localhost:18404/sendmail')
-    req.add_header('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8')
-    res = urllib.request.urlopen(req, d)
-    resdata = res.read()
-    return type(resdata)
+    #d = urllib.parse.urlencode({'status': status, 'message': message, 'traceback': traceback, 'version': version,
+    #    'data': json.dumps({'subject': 'Ukrainianside error',
+    #        'base': cherrypy.request.base, 'request_line': cherrypy.request.request_line})})
+    #d = d.encode('utf-8')
+    #req = urllib.request.Request('http://localhost:18404/sendmail')
+    #req.add_header('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8')
+    #res = urllib.request.urlopen(req, d)
+    #resdata = res.read()
+    #return type(resdata)
+    
+    return 'Error'
 
 cherrypy.tree.mount(ukrainianside())
 
