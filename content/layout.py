@@ -45,5 +45,5 @@ def getHome():
 
 def getRailwayTimetable(rwid):
     raw_rwtt = urllib.request.urlopen(' http://localhost:18050/get_railway_timetable/' + str(rwid))
-    return raw_rwtt.read()
+    return raw_rwtt.read().decode('utf-8')
     
