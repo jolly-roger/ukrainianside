@@ -5,10 +5,10 @@ import urllib.request
 import urllib.parse
 
 
-from content import layout
-from data import aliases
+from .content import layout
+from .data import aliases
 
-import sitemap
+from . import sitemap
 
 
 class ukrainianside(object):
@@ -76,8 +76,3 @@ from cherrypy.process import servers
 def fake_wait_for_occupied_port(host, port): return
 
 servers.wait_for_occupied_port = fake_wait_for_occupied_port
-
-
-#ukrainiansideconf = os.path.join(os.path.dirname(__file__), "ukrainianside.conf")
-#
-#cherrypy.quickstart(ukrainianside(), config=ukrainiansideconf)

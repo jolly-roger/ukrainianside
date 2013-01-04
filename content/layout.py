@@ -4,7 +4,7 @@ import urllib.request
 import urllib.parse
 from jinja2 import Environment, FileSystemLoader
 
-import data
+from .. import data
 
 
 env = None
