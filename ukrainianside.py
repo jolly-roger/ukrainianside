@@ -5,10 +5,10 @@ import urllib.request
 import urllib.parse
 
 
-from content import layout
-from data import aliases
+from .content import layout
+from .data import aliases
 
-import sitemap
+from . import sitemap
 
 
 class ukrainianside(object):
@@ -66,13 +66,12 @@ def error_page_default(status, message, traceback, version):
     res = urllib.request.urlopen(req, d)
     return res.read().decode()
 
-cherrypy.tree.mount(ukrainianside())
-
-cherrypy.config.update({'error_page.default': error_page_default})
-cherrypy.config.update({'engine.autoreload_on':False})
-
-from cherrypy.process import servers
-
-def fake_wait_for_occupied_port(host, port): return
-
-servers.wait_for_occupied_port = fake_wait_for_occupied_port
+def wsgi():
+    conf = os.path.join(os.path.dirname(__file__), "ukrainianside.conf")
+    tree = cherrypy._cptree.Tree()
+    app = tree.mount(ukrainianside(), config=conf)
+    app.config.update({'/': {'error_page.default': error_page_default}})
+    tree.bind_address = (app.config['global']['server.socket_host'], app.config['global']['server.socket_port'])
+    tree.numthreads = app.config['global']['server.thread_pool']
+    tree.request_queue_size = app.config['global']['server.socket_queue_size']
+    return tree
