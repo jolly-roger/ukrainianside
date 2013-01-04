@@ -1,6 +1,6 @@
 import datetime
 
-from .data import urls
+from data import urls
 
 
 def getSitemap():

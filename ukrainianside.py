@@ -5,10 +5,10 @@ import urllib.request
 import urllib.parse
 
 
-from .content import layout
-from .data import aliases
+from content import layout
+from data import aliases
 
-from . import sitemap
+import sitemap
 
 
 class ukrainianside(object):
