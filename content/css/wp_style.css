@@ -226,10 +226,6 @@ body {
 	margin: 0 0 1.625em;
 	padding: 0;
 }
-.one-column article.feature-image.small .entry-title {
-	font-size: 20px;
-	line-height: 1.3em;
-}
 .one-column article.feature-image.small .entry-summary {
 	height: 150px;
 	overflow: hidden;
@@ -677,28 +673,6 @@ a:hover {
 .no-results {
 	border-bottom: none;
 }
-.entry-title {
-	padding-right: 76px;
-}
-.entry-title {
-	clear: both;
-	color: #222;
-	font-size: 26px;
-	font-weight: bold;
-	line-height: 1.5em;
-	padding-bottom: .3em;
-	padding-top: 15px;
-}
-.entry-title,
-.entry-title a {
-	color: #222;
-	text-decoration: none;
-}
-.entry-title a:hover,
-.entry-title a:focus,
-.entry-title a:active {
-	color: #1982d1;
-}
 .entry-summary {
 	padding: 1.625em 0 0;
 }
@@ -946,15 +920,6 @@ a:active img[class*="wp-image-"],
 .singular.page .hentry {
 	padding: 3.5em 0 0;
 }
-.singular .entry-title {
-	color: #000;
-	font-size: 36px;
-	font-weight: bold;
-	line-height: 48px;
-}
-.singular .entry-title {
-	padding-right: 0;
-}
 blockquote.pull {
 	font-size: 21px;
 	font-weight: bold;
@@ -987,28 +952,6 @@ blockquote.pull {
 }
 
 
-/* =Aside
------------------------------------------------ */
-
-.format-aside .entry-title {
-	display: none;
-}
-.singular .format-aside .entry-title {
-	display: block;
-}
-
-
-/* =Link
------------------------------------------------ */
-
-.format-link .entry-title {
-	display: none;
-}
-.singular .format-link .entry-title {
-	display: block;
-}
-
-
 /* =Gallery
 ----------------------------------------------- */
 
@@ -1022,12 +965,6 @@ blockquote.pull {
 /* =Status
 ----------------------------------------------- */
 
-.format-status .entry-title {
-	display: none;
-}
-.singular .format-status .entry-title {
-	display: block;
-}
 .format-status img.avatar {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -1134,9 +1071,6 @@ article.intro {
 	margin: -1.855em -8.9% 1.625em;
 	padding: 0 8.9%;
 }
-article.intro .entry-title {
-	display: none;
-}
 article.intro .edit-link a {
 	background: #aaa;
 	-moz-border-radius: 3px;
@@ -1191,9 +1125,6 @@ article.feature-image.small {
 	margin: 0 0 1.625em;
 	width: 45%;
 }
-article.feature-image.small .entry-title {
-	line-height: 1.2em;
-}
 article.feature-image.small .entry-summary {
 	color: #555;
 	font-size: 13px;
@@ -1232,22 +1163,6 @@ section.feature-image.large .hentry {
 	margin: 1.625em 9% 0 0;
 	position: absolute;
 	top: 0;
-}
-article.feature-image.large .entry-title a {
-	background: #222;
-	background: rgba(0,0,0,0.8);
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	color: #fff;
-	display: inline-block;
-	font-weight: 300;
-	padding: .2em 20px;
-}
-section.feature-image.large:hover .entry-title a,
-section.feature-image.large .entry-title:hover a {
-	background: #eee;
-	background: rgba(255,255,255,0.8);
-	color: #222;
 }
 article.feature-image.large .entry-summary {
 	display: none;
@@ -1371,10 +1286,6 @@ section.recent-posts .other-recent-posts {
 section.recent-posts .other-recent-posts li {
 	padding: 0.3125em 0;
 	position: relative;
-}
-section.recent-posts .other-recent-posts .entry-title {
-	border-top: 1px solid #ddd;
-	font-size: 17px;
 }
 section.recent-posts .other-recent-posts a[rel="bookmark"] {
 	color: #373737;
@@ -1584,11 +1495,6 @@ section.ephemera ol,
 	list-style: square;
 	margin: 5px 0 0;
 }
-.widget_twentyeleven_ephemera .widget-entry-title {
-	font-size: 15px;
-	font-weight: bold;
-	padding: 0;
-}
 .widget_twentyeleven_ephemera .comments-link a,
 .widget_twentyeleven_ephemera .comments-link > span {
 	color: #666;
@@ -1597,12 +1503,6 @@ section.ephemera ol,
 	font-weight: 500;
 	line-height: 2.76333em;
 	text-transform: uppercase;
-}
-section.ephemera .entry-title .comments-link a:hover,
-.widget_twentyeleven_ephemera .entry-title .comments-link a:hover {
-}
-section.ephemera .entry-title a span {
-	color: #29628d;
 }
 
 /* Twitter */
@@ -2152,15 +2052,6 @@ p.comment-form-comment {
 	}
 	#access ul {
 		font-size: 12px;
-	}
-	.entry-title {
-		font-size: 21px;
-	}
-	.featured-post .entry-title {
-		font-size: 14px;
-	}
-	.singular .entry-title {
-		font-size: 28px;
 	}
 	blockquote {
 		margin: 0;
