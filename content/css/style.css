@@ -106,7 +106,6 @@ body {
 	position: relative;
 	width: auto;
 }
-.singular .entry-header,
 .singular footer.entry-meta,
 .singular #comments-title {
 	margin: 0 auto;
@@ -242,7 +241,6 @@ body {
 	left: -9%;
 }
 /* Remove the margin on singular articles */
-.one-column.singular .entry-header,
 .one-column.singular footer.entry-meta,
 .one-column.singular #comments-title {
 	width: 100%;
@@ -702,13 +700,7 @@ a:hover {
 .no-results {
 	border-bottom: none;
 }
-.blog .sticky .entry-header .entry-meta {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-}
-.entry-title,
-.entry-header .entry-meta {
+.entry-title {
 	padding-right: 76px;
 }
 .entry-title {
@@ -934,9 +926,6 @@ a:active img[class*="wp-image-"],
 }
 
 /* Password Protected Posts */
-.post-password-required .entry-header .comments-link {
-	margin: 1.625em 0 0;
-}
 .post-password-required input[type=password] {
 	margin: 0.8125em 0;
 }
@@ -985,59 +974,6 @@ a:active img[class*="wp-image-"],
 	margin: 5px 0 10px;
 }
 
-/* Comments link */
-.entry-header .comments-link a {
-	background: #eee url(images/comment-bubble.png) no-repeat;
-	color: #666;
-	font-size: 13px;
-	font-weight: normal;
-	line-height: 35px;
-	overflow: hidden;
-	padding: 0 0 0;
-	position: absolute;
-	top: 1.5em;
-	right: 0;
-	text-align: center;
-	text-decoration: none;
-	width: 43px;
-	height: 36px;
-}
-.entry-header .comments-link a:hover,
-.entry-header .comments-link a:focus,
-.entry-header .comments-link a:active {
-	background-color: #1982d1;
-	color: #fff;
-	color: rgba(255,255,255,0.8);
-}
-.entry-header .comments-link .leave-reply {
-	visibility: hidden;
-}
-
-/*
-Post Formats Headings
-To hide the headings, display: none the ".entry-header .entry-format" selector,
-and remove the padding rules below.
-*/
-.entry-header .entry-format {
-	color: #666;
-	font-size: 10px;
-	font-weight: 500;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	position: absolute;
-	text-transform: uppercase;
-	top: -5px;
-}
-.entry-header hgroup .entry-title {
-	padding-top: 15px;
-}
-.recent-posts .entry-header .entry-format {
-	display: none;
-}
-.recent-posts .entry-header hgroup .entry-title {
-	padding-top: 0;
-}
-
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
 	border-bottom: none;
@@ -1053,14 +989,8 @@ and remove the padding rules below.
 	font-weight: bold;
 	line-height: 48px;
 }
-.singular .entry-title,
-.singular .entry-header .entry-meta {
+.singular .entry-title {
 	padding-right: 0;
-}
-.singular .entry-header .entry-meta {
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 blockquote.pull {
 	font-size: 21px;
@@ -1104,8 +1034,7 @@ blockquote.pull {
 /* =Aside
 ----------------------------------------------- */
 
-.format-aside .entry-title,
-.format-aside .entry-header .comments-link {
+.format-aside .entry-title {
 	display: none;
 }
 .singular .format-aside .entry-title {
@@ -1116,8 +1045,7 @@ blockquote.pull {
 /* =Link
 ----------------------------------------------- */
 
-.format-link .entry-title,
-.format-link .entry-header .comments-link {
+.format-link .entry-title {
 	display: none;
 }
 .singular .format-link .entry-title {
@@ -1138,8 +1066,7 @@ blockquote.pull {
 /* =Status
 ----------------------------------------------- */
 
-.format-status .entry-title,
-.format-status .entry-header .comments-link {
+.format-status .entry-title {
 	display: none;
 }
 .singular .format-status .entry-title {
@@ -1170,9 +1097,6 @@ blockquote.pull {
 /* =Image
 ----------------------------------------------- */
 
-.indexed.format-image .entry-header {
-	min-height: 61px; /* Prevent the comment icon from colliding with the image when there is no title */
-}
 .indexed.format-image p,
 .indexed.format-image p img {
 	margin-bottom: 0;
@@ -2244,7 +2168,6 @@ p.comment-form-comment {
 		width: auto;
 	}
 	/* Remove the margin on singular articles */
-	.singular .entry-header,
 	.singular footer.entry-meta,
 	.singular #comments-title {
 		width: 100%;
@@ -2481,16 +2404,12 @@ p.comment-form-comment {
 		margin: 0;
 		width: 100%;
 	}
-	.singular .entry-header .entry-meta {
-		position: static;
-	}
 	.entry-meta .edit-link a {
 		display: none;
 	}
 	#content nav {
 		display: none;
 	}
-	.singular .entry-header,
 	.singular footer.entry-meta,
 	.singular #comments-title {
 		margin: 0;
@@ -2505,9 +2424,6 @@ p.comment-form-comment {
 	}
 	.entry-meta {
 		font-size: 10pt;
-	}
-	.entry-header .comments-link {
-		display: none;
 	}
 	.page-link {
 		display: none;

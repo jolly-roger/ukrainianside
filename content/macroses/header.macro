@@ -1,11 +1,9 @@
 {% from "macroses/social.macro" import social as social%}
 
 {% macro header(aticleAlias) -%}
-    <header class="entry-header">
-        <h1 class="entry-title">
-            <a href="{{ getUrlByAlias(aticleAlias) }}"
-               title="Постоянная ссылка на {{getNameByAlias(aticleAlias)}}" 
-               rel="bookmark">{{getNameByAlias(aticleAlias)}}</a></h1>
-        {{social(aticleAlias)}}
-    </header><!-- .entry-header -->
+    <h1 class="entry-title">
+        <a href="{{ getUrlByAlias(aticleAlias) }}"
+           title="Постоянная ссылка на {{getNameByAlias(aticleAlias)}}" 
+           rel="bookmark">{{getNameByAlias(aticleAlias)}}</a></h1>
+    {{social(aticleAlias)}}
 {%- endmacro %}
