@@ -106,7 +106,6 @@ body {
 	position: relative;
 	width: auto;
 }
-.singular footer.entry-meta,
 .singular #comments-title {
 	margin: 0 auto;
 	width: 68.9%;
@@ -241,7 +240,6 @@ body {
 	left: -9%;
 }
 /* Remove the margin on singular articles */
-.one-column.singular footer.entry-meta,
 .one-column.singular #comments-title {
 	width: 100%;
 }
@@ -254,11 +252,6 @@ body {
 }
 .one-column.singular .pull.alignright {
 	margin: 0 0 0 1.625em;
-}
-.one-column.singular .entry-meta .edit-link a {
-	position: absolute;
-	left: 0;
-	top: 40px;
 }
 .one-column.singular #author-info {
 	margin: 2.2em -8.8% 0;
@@ -722,18 +715,6 @@ a:hover {
 .entry-title a:active {
 	color: #1982d1;
 }
-.entry-meta {
-	color: #666;
-	clear: both;
-	font-size: 12px;
-	line-height: 18px;
-}
-.entry-meta a {
-	font-weight: bold;
-}
-.single-author .entry-meta .by-author {
-	display: none;
-}
 .entry-summary {
 	padding: 1.625em 0 0;
 }
@@ -799,7 +780,6 @@ dl.gallery-item {
 .page-link span {
 	margin-right: 6px;
 }
-.entry-meta .edit-link a,
 .commentlist .edit-link a {
 	background: #eee;
 	-moz-border-radius: 3px;
@@ -812,7 +792,6 @@ dl.gallery-item {
 	text-decoration: none;
 	padding: 0 8px;
 }
-.entry-meta .edit-link a:hover,
 .commentlist .edit-link a:hover {
 	background: #888;
 	color: #fff;
@@ -1022,13 +1001,6 @@ blockquote.pull {
 .singular blockquote.pull.alignright {
 	width: 33%;
 }
-.singular .entry-meta .edit-link a {
-	bottom: auto;
-	left: 50px;
-	position: absolute;
-	right: auto;
-	top: 80px;
-}
 
 
 /* =Aside
@@ -1100,32 +1072,6 @@ blockquote.pull {
 .indexed.format-image p,
 .indexed.format-image p img {
 	margin-bottom: 0;
-}
-.indexed.format-image footer.entry-meta {
-	background: #ddd;
-	margin-top: -7px;
-	padding: 20px 30px;
-	overflow: hidden;
-}
-.indexed.format-image div.entry-meta {
-	display: inline-block;
-	float: left;
-	width: 35%;
-}
-.indexed.format-image div.entry-meta + div.entry-meta {
-	float: none;
-	width: 65%;
-}
-.indexed.format-image .entry-meta span.cat-links,
-.indexed.format-image .entry-meta span.tag-links,
-.indexed.format-image .entry-meta span.comments-link {
-	display: block;
-}
-.indexed.format-image footer.entry-meta a {
-	color: #444;
-}
-.indexed.format-image footer.entry-meta a:hover {
-	color: #fff;
 }
 #content .indexed.format-image img {
 	border: none;
@@ -1237,11 +1183,6 @@ section.featured-post .hentry {
 	border: none;
 	color: #666;
 	margin: 0;
-}
-section.featured-post .entry-meta {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
 }
 
 /* Small featured post */
@@ -2168,7 +2109,6 @@ p.comment-form-comment {
 		width: auto;
 	}
 	/* Remove the margin on singular articles */
-	.singular footer.entry-meta,
 	.singular #comments-title {
 		width: 100%;
 	}
@@ -2181,11 +2121,6 @@ p.comment-form-comment {
 	}
 	.singular .pull.alignright {
 		margin: 0 0 0 1.625em;
-	}
-	.singular .entry-meta .edit-link a {
-		left: 0;
-		position: absolute;
-		top: 40px;
 	}
 	.singular #author-info {
 		margin: 2.2em -8.8% 0;
@@ -2245,9 +2180,6 @@ p.comment-form-comment {
 	}
 	.singular .entry-title {
 		font-size: 28px;
-	}
-	.entry-meta {
-		font-size: 12px;
 	}
 	blockquote {
 		margin: 0;
@@ -2354,10 +2286,6 @@ p.comment-form-comment {
 		background: none !important;
 		font-size: 10pt;
 	}
-	footer.entry-meta a[rel=bookmark]:link:after,
-	footer.entry-meta a[rel=bookmark]:visited:after {
-		content: " [" attr(href) "] "; /* Show URLs */
-	}
 	#page {
 		clear: both !important;
 		display: block !important;
@@ -2404,13 +2332,9 @@ p.comment-form-comment {
 		margin: 0;
 		width: 100%;
 	}
-	.entry-meta .edit-link a {
-		display: none;
-	}
 	#content nav {
 		display: none;
 	}
-	.singular footer.entry-meta,
 	.singular #comments-title {
 		margin: 0;
 		width: 100%;
@@ -2421,9 +2345,6 @@ p.comment-form-comment {
 	.entry-title,
 	.singular .entry-title {
 		font-size: 21pt;
-	}
-	.entry-meta {
-		font-size: 10pt;
 	}
 	.page-link {
 		display: none;
