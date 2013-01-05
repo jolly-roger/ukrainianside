@@ -19,8 +19,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+fieldset, form, label, legend{
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -40,14 +39,6 @@ body {
 }
 ol, ul {
 	list-style: none;
-}
-table {/* tables still need 'cellspacing="0"' in the markup */
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	font-weight: normal;
-	text-align: left;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -687,23 +678,6 @@ a:hover {
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
 	text-transform: uppercase;
-}
-.comment-content table {
-	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
-	width: 100%;
-}
-.comment-content th {
-	color: #666;
-	font-size: 10px;
-	font-weight: 500;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
-}
-.comment-content td {
-	border-top: 1px solid #ddd;
-	padding: 6px 10px 6px 0;
 }
 .comment-content ul,
 .comment-content ol {
