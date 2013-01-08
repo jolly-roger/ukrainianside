@@ -11,10 +11,10 @@
 	color: #1982d1;
 }
 
-.entry-title {
+#entry-title {
 	padding-right: 76px;
 }
-.entry-title {
+#entry-title {
 	clear: both;
 	color: #222;
 	font-size: 26px;
@@ -23,13 +23,14 @@
 	padding-bottom: .3em;
 	padding-top: 15px;
 }
-.entry-title,
-.entry-title a {
+#entry-title,
+#entry-title a {
 	color: #222;
 	text-decoration: none;
 }
-.entry-title a:hover,
-.entry-title a:focus,
-.entry-title a:active {
+#entry-title a:hover,
+#entry-title a:focus,
+#entry-title a:active {
 	color: #1982d1;
+	text-decoration: none;
 }
