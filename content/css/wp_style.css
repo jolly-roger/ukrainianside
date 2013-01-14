@@ -77,10 +77,6 @@ body {
 	margin: 0 -26.4% 0 0;
 	width: 100%;
 }
-#content {
-	margin: 0 34% 0 7.6%;
-	width: 58.4%;
-}
 #secondary {
 	float: right;
 	margin-right: 7.6%;
@@ -90,12 +86,6 @@ body {
 /* Singular */
 .singular #primary {
 	margin: 0;
-}
-.singular #content,
-.left-sidebar.singular #content {
-	margin: 0 7.6%;
-	position: relative;
-	width: auto;
 }
 .singular #comments-title {
 	margin: 0 auto;
@@ -113,11 +103,6 @@ body {
 .left-sidebar.page-template-showcase-php #primary {
 	margin: 0;
 }
-.page-template-showcase-php #content,
-.left-sidebar.page-template-showcase-php #content {
-	margin: 0 7.6%;
-	width: auto;
-}
 .page-template-showcase-php section.recent-posts {
 	float: right;
 	margin: 0 0 0 31%;
@@ -133,10 +118,6 @@ body {
 .error404 #primary {
 	float: none;
 	margin: 0;
-}
-.error404 #primary #content {
-	margin: 0 7.6%;
-	width: auto;
 }
 
 /* Alignment */
@@ -163,10 +144,6 @@ body {
 	margin: 0 0 0 -26.4%;
 	width: 100%;
 }
-.left-sidebar #content {
-	margin: 0 7.6% 0 34%;
-	width: 58.4%;
-}
 .left-sidebar #secondary {
 	float: left;
 	margin-left: 7.6%;
@@ -177,10 +154,6 @@ body {
 /* One column */
 .one-column #page {
 	max-width: 690px;
-}
-.one-column #content {
-	margin: 0 7.6%;
-	width: auto;
 }
 .one-column #nav-below {
 	border-bottom: 1px solid #ddd;
@@ -788,32 +761,14 @@ p img,
 	left: 10px;
 	top: 7px;
 }
-#content .gallery {
-	margin: 0 auto 1.625em;
-}
-#content .gallery a img {
-	border: none;
-}
 img#wpstats {
 	display: block;
 	margin: 0 auto 1.625em;
-}
-#content .gallery-columns-4 .gallery-item {
-	width: 23%;
-	padding-right: 2%;
-}
-#content .gallery-columns-4 .gallery-item img {
-	width: 100%;
-	height: auto;
 }
 
 /* Image borders */
 img[class*="align"],
 img[class*="wp-image-"],
-#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-	border: 1px solid #ddd;
-	padding: 6px;
-}
 .wp-caption img {
 	border-color: #eee;
 }
@@ -822,10 +777,7 @@ a:hover img[class*="align"],
 a:active img[class*="align"],
 a:focus img[class*="wp-image-"],
 a:hover img[class*="wp-image-"],
-a:active img[class*="wp-image-"],
-#content .gallery .gallery-icon a:focus img,
-#content .gallery .gallery-icon a:hover img,
-#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
+a:active img[class*="wp-image-"] {/* Add some useful style to those fancy borders for linked images ... */
 	background: #eee;
 	border-color: #bbb;
 }
@@ -967,11 +919,6 @@ blockquote.pull {
 .indexed.format-image p,
 .indexed.format-image p img {
 	margin-bottom: 0;
-}
-#content .indexed.format-image img {
-	border: none;
-	max-width: 100%;
-	padding: 0;
 }
 .indexed.format-image .wp-caption {
 	background: #111;
@@ -1209,12 +1156,6 @@ section.feature-image.large img {
 .featured-post .feature-image.small:after {
 	top: 253px;
 }
-#content .feature-slider {
-	top: 5px;
-	right: 8.9%;
-	overflow: visible;
-	position: absolute;
-}
 .feature-slider ul {
 	list-style-type: none;
 	margin: 0;
@@ -1345,16 +1286,6 @@ section.recent-posts .other-recent-posts li:after {
 /* =Navigation
 -------------------------------------------------------------- */
 
-#content nav {
-	clear: both;
-	overflow: hidden;
-	padding: 0 0 1.625em;
-}
-#content nav a {
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 2.2em;
-}
 #nav-above {
 	padding: 0 0 1.625em;
 }
@@ -1372,9 +1303,6 @@ section.recent-posts .other-recent-posts li:after {
 	float: right;
 	text-align: right;
 	width: 50%;
-}
-#content nav .meta-nav {
-	font-weight: normal;
 }
 
 /* Singular navigation */
@@ -1908,10 +1836,6 @@ p.comment-form-comment {
 
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
-	#main #content {
-		margin: 0 7.6%;
-		width: auto;
-	}
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
@@ -2081,26 +2005,6 @@ p.comment-form-comment {
 	#respond .comment-form-email .required {
 		left: 95%;
 	}
-	#content .gallery-columns-3 .gallery-item {
-		width: 31%;
-		padding-right: 2%;
-	}
-	#content .gallery-columns-3 .gallery-item img {
-		width: 100%;
-		height: auto;
-	}
-
-}
-@media (max-width: 450px) {
-	#content .gallery-columns-2 .gallery-item {
-		width: 45%;
-		padding-right: 4%;
-	}
-	#content .gallery-columns-2 .gallery-item img {
-		width: 100%;
-		height: auto;
-	}
-
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	body {
