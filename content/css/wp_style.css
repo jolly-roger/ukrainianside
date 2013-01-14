@@ -156,7 +156,6 @@ body {
 	max-width: 690px;
 }
 .one-column #nav-below {
-	border-bottom: 1px solid #ddd;
 	margin-bottom: 1.625em;
 }
 .one-column #secondary {
@@ -174,9 +173,6 @@ body {
 	float: none;
 	margin: 0;
 	width: auto;
-}
-.one-column .page-template-showcase-php .other-recent-posts {
-	border-bottom: 1px solid #ddd;
 }
 /* Simplify the showcase template when small feature */
 .one-column section.featured-post .attachment-small-feature {
@@ -431,7 +427,6 @@ a:hover {
 #access a.assistive-text:active,
 #access a.assistive-text:focus {
 	background: #eee;
-	border-bottom: 1px solid #ddd;
 	color: #1982d1;
 	clip: auto !important;
 	font-size: 12px;
@@ -628,7 +623,6 @@ a:hover {
 }
 .hentry,
 .no-results {
-	border-bottom: 1px solid #ddd;
 	margin: 0 0 1.625em;
 	padding: 0 0 1.625em;
 	position: relative;
@@ -804,12 +798,10 @@ a:active img[class*="wp-image-"] {/* Add some useful style to those fancy border
 .singular #author-info {
 	background: #f9f9f9;
 	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
 	margin: 2.2em -35.6% 0 -35.4%;
 	padding: 20px 35.4%;
 }
 .archive #author-info {
-	border-bottom: 1px solid #ddd;
 	margin: 0 0 2.2em;
 	padding: 0 0 2.2em;
 }
@@ -1097,7 +1089,6 @@ section.feature-image.large img {
 
 /* Featured Slider */
 .featured-posts {
-	border-bottom: 1px solid #ddd;
 	display: block;
 	height: 328px;
 	margin: 1.625em -8.9% 20px;
@@ -1194,7 +1185,6 @@ section.recent-posts .hentry {
 	margin: 0;
 }
 section.recent-posts .other-recent-posts {
-	border-bottom: 1px solid #ddd;
 	list-style: none;
 	margin: 0;
 }
@@ -1837,7 +1827,6 @@ p.comment-form-comment {
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
 	#nav-below {
-		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
 	}
 	#main #secondary {
@@ -1861,9 +1850,6 @@ p.comment-form-comment {
 		float: none;
 		margin: 0;
 		width: auto;
-	}
-	.page-template-showcase-php .other-recent-posts {
-		border-bottom: 1px solid #ddd;
 	}
 	/* Simplify the showcase template when small feature */
 	section.featured-post .attachment-small-feature,
