@@ -100,13 +100,13 @@
         </script>
         
         <div id="page" class="hfeed">
-            <header id="branding" role="banner">
-                    <hgroup>
-                        <h1 id="site-title"><a href="http://ukrainianside.com/" title="Украинская сторонка" rel="home">Украинская сторонка</a></h1>
-                        <h2 id="site-description">Путешествия по Украине</h2>
-                    </hgroup>
-                    <hr />
-            </header><!-- #branding -->
-    {% block mainContent %}
-    {% endblock %}
+            <div style='display: table-cell; padding-top: 20px;'>
+                <a class="brand" href="/">
+                    <img src='http://picpuk.ru/pics/get/82.jpg' title='Украинская сторонка' alt='Украинская сторонка'/>
+                </a>
+                <h1><a href='/' title='Украинская сторонка' rel='home'>Украинская сторонка</a></h1>
+            </div>
+            {% block mainContent %}
+            {% endblock %}
+        </div>
 </html>
