@@ -99,17 +99,15 @@
             });
         </script>
         
-        <div id="page" class="hfeed">
-            <div class='page-header' style='display: table-cell; width: 100%;'>
-                <a class="brand" href="/">
-                    <img src='http://picpuk.ru/pics/get/82.jpg' title='Украинская сторонка' alt='Украинская сторонка'/>
-                </a>
-                <div style='display: inline-block; margin-left: 20px;'>
-                    <p><h1>Украинская сторонка</h1></p>
-                    <small>Путешествия по Украине</small>
-                </div>
+        <div class='page-header' style='display: table-cell;'>
+            <a class="brand" href="/">
+                <img src='http://picpuk.ru/pics/get/82.jpg' title='Украинская сторонка' alt='Украинская сторонка'/>
+            </a>
+            <div style='display: inline-block; margin-left: 20px;'>
+                <p><h1>Украинская сторонка</h1></p>
+                <small>Путешествия по Украине</small>
             </div>
-            {% block mainContent %}
-            {% endblock %}
         </div>
+        {% block mainContent %}
+        {% endblock %}
 </html>
