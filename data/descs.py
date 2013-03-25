@@ -3,7 +3,7 @@ import cherrypy
 
 
 def getAticleDescByAlias(alias):
-	conn = sqlite3.connect(cherrypy.request.app.config["ukrainianside"]["base_dir"] + "data/data.db")
+	conn = sqlite3.connect("/home/www/ukrainianside/" + "data/data.db")
 	cur = conn.cursor()
 	
 	cur.execute("select d.value from aliases as al, descs as d, aticles as at "\
