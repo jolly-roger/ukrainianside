@@ -19,6 +19,6 @@ error_logger_formatter = logging.Formatter('[%(asctime)s] %(name)s %(levelname)s
 error_logger_fh.setFormatter(error_logger_formatter)
 error_logger.addHandler(error_logger_fh)
 
-import ukrainianside
+from . import ukrainianside
 
 app = ukrainianside.wsgi()
