@@ -3,17 +3,12 @@ import json
 import os.path
 import urllib.request
 import urllib.parse
-import traceback
-import logging
 
 
 from .content import layout
 from .data import aliases
 
 from . import sitemap
-
-
-logger = logging.getLogger('werp_error.ukrainianside')
 
 
 class ukrainianside(object):
@@ -29,39 +24,35 @@ class ukrainianside(object):
     
     @cherrypy.expose
     def default(self, year = None, category = None, subcategory = None, title = None, *args, **kwargs):
-        try:
-            als = aliases.getAll()
-            
-            isexist = False
-            
-            if category is not None:
-                if aliases.isExist(category, als): isexist = True
-                else: isexist = False
-            if subcategory is not None:
-                if aliases.isExist(subcategory, als): isexist = True
-                else: isexist = False
-            if title is not None:
-                if aliases.isExist(title, als): isexist = True
-                else: isexist = False
-    
-            if isexist:
-                if year == 'category':
-                    if title is not None:
-                        return layout.getCategory(title)
-                    elif subcategory is not None:
-                        return layout.getCategory(subcategory)
-                    elif category is not None:
-                        return layout.getCategory(category)
-                else:
-                    if title is not None:
-                        return layout.getAticle(title)
-                    elif subcategory is not None:
-                        return layout.getAticle(subcategory)
-            else:    
-                return layout.getHome()
-        except:
-            logger.exception(traceback.format_exc())
-            return ''
+        als = aliases.getAll()
+        
+        isexist = False
+        
+        if category is not None:
+            if aliases.isExist(category, als): isexist = True
+            else: isexist = False
+        if subcategory is not None:
+            if aliases.isExist(subcategory, als): isexist = True
+            else: isexist = False
+        if title is not None:
+            if aliases.isExist(title, als): isexist = True
+            else: isexist = False
+
+        if isexist:
+            if year == 'category':
+                if title is not None:
+                    return layout.getCategory(title)
+                elif subcategory is not None:
+                    return layout.getCategory(subcategory)
+                elif category is not None:
+                    return layout.getCategory(category)
+            else:
+                if title is not None:
+                    return layout.getAticle(title)
+                elif subcategory is not None:
+                    return layout.getAticle(subcategory)
+        else:    
+            return layout.getHome()
 
 
 def error_page_default(status, message, traceback, version):
