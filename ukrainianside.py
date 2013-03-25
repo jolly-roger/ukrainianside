@@ -67,11 +67,7 @@ def error_page_default(status, message, traceback, version):
     return res.read().decode()
 
 def wsgi():
-    conf = os.path.join(os.path.dirname(__file__), "ukrainianside.conf")
     tree = cherrypy._cptree.Tree()
-    app = tree.mount(ukrainianside(), config=conf)
+    app = tree.mount(ukrainianside())
     app.config.update({'/': {'error_page.default': error_page_default}})
-    tree.bind_address = (app.config['global']['server.socket_host'], app.config['global']['server.socket_port'])
-    tree.numthreads = app.config['global']['server.thread_pool']
-    tree.request_queue_size = app.config['global']['server.socket_queue_size']
     return tree
