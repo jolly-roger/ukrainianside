@@ -16,8 +16,8 @@ class ukrainianside(object):
     def sitemap_xml(self):
         cherrypy.response.headers['Content-Type'] = "application/xml "
 
-        #return bytes(sitemap.getSitemap(), 'utf-8')
-        return sitemap.getSitemap()
+        return bytes(sitemap.getSitemap(), 'utf-8')
+        #return sitemap.getSitemap()
     
     @cherrypy.expose
     def index(self):
